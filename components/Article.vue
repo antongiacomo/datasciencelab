@@ -3,7 +3,7 @@
     <article
       class=" w-full flex items-center antialiased ml-2 transform transition duration-500 ease-in-out hover:scale-105"
     >
-      <nuxt-link class="w-full  h-full" :to="path">
+      <!-- <nuxt-link class="w-full  h-full" :to="path"> -->
 
           <div class="w-full h-full  bg-white  px-8 py-4 rounded-lg shadow-lg">
             <!-- <div class="flex items-baseline">
@@ -26,7 +26,7 @@
             </div>
           </div>
 
-      </nuxt-link>
+      <!-- </nuxt-link> -->
     </article>
 
 </template>
