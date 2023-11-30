@@ -1,19 +1,12 @@
-
 <template>
-  <article class="pt-8 mx-auto pb-2">
-    <div
-      class="flex items-center antialiased ml-2 transform transition duration-500 ease-in-out hover:scale-105"
-    >
-      <nuxt-link :to="path">
-        <img
-          :src="img"
-          :alt="title"
-          class="object-cover object-center rounded-lg shadow-md img"
-        />
 
-        <div class="relative px-4 -mt-16">
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <div class="flex items-baseline">
+    <article
+      class=" w-full flex items-center antialiased ml-2 transform transition duration-500 ease-in-out hover:scale-105"
+    >
+      <nuxt-link class="w-full  h-full" :to="path">
+
+          <div class="w-full h-full  bg-white  px-8 py-4 rounded-lg shadow-lg">
+            <!-- <div class="flex items-baseline">
               <ul>
                 <li
                   v-for="tag in tags"
@@ -23,36 +16,34 @@
                   {{ tag }}
                 </li>
               </ul>
+            </div> -->
+            <div class="mb-4 flex items-center  justify-between leading-relaxed">
+              <p class="text-sm uppercase">{{ convertDate(date) }}</p>
+              <p class="text-sm uppercase">{{time}}</p>
             </div>
-
-            <h4 class="my-2 py-0 font-semibold leading-tight text-lg truncate">
+            <div class="my-2 py-0 font-semibold leading-tight">
               {{ title }}
-            </h4>
-            <div class="py-2 flex items-center leading-relaxed">
-              <p class="px-2 text-sm">{{ convertDate(date) }} </p>
-              <p class="h-1 w-1 rounded-full bg-gray-400 mx-1"></p>
-              <span class="pl-2 text-sm font-semibold">{{ author }}</span>
             </div>
           </div>
-        </div>
+
       </nuxt-link>
-    </div>
-  </article>
+    </article>
+
 </template>
 
 <script setup>
 defineProps({
   path: String,
-  img: String,
   title: String,
   tags: Object,
   date: String,
-  author: String
+  time: String,
+  author: String,
 });
 
 function convertDate(date) {
   const da = new Date(date);
-  return da.toLocaleString("en-US", {
+  return da.toLocaleString("it-IT", {
     year: "numeric",
     month: "long",
     day: "numeric",
