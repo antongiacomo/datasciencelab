@@ -50,7 +50,7 @@ useHead({
     </header>
     <Hr />
     <section class="grid grid-cols-8 mb-2">
-      <article class="col-span-full md:col-span-6 md:col-start-1 md:row-start-1 prose w-full p-4 max-w-3xl m-auto">
+      <article class="col-span-full max-w-prose md:col-span-6 md:col-start-1 md:row-start-1 prose w-full p-4 m-auto">
         <ContentRenderer :value="data.article">
           <ContentRendererMarkdown :value="data.article" />
         </ContentRenderer>

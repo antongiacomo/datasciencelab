@@ -1,11 +1,11 @@
 <template>
 
     <article
-      class=" w-full flex items-center antialiased ml-2 transform transition duration-500 ease-in-out hover:scale-105"
+      class="border rounded-lg w-full h-96 flex items-center antialiased ml-2 transform transition duration-500 ease-in-out hover:scale-105"
     >
-      <!-- <nuxt-link class="w-full  h-full" :to="path"> -->
+      <nuxt-link class="w-full  h-full" :to="path">
 
-          <div class="w-full h-full  bg-white  px-8 py-4 rounded-lg shadow-lg">
+          <div class="w-full h-full rounded-lg  bg-white  px-8 py-4  shadow-lg  ">
             <!-- <div class="flex items-baseline">
               <ul>
                 <li
@@ -26,7 +26,7 @@
             </div>
           </div>
 
-      <!-- </nuxt-link> -->
+      </nuxt-link>
     </article>
 
 </template>
