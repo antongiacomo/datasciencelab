@@ -1,21 +1,23 @@
 ---
 title: 'Software Engineering Abstractions for Metaheuristics: a 20 years journey'
 
-subtitle: 'Software Engineering Abstractions for Metaheuristics: a 20 years journey'
-
+# potremmo toglierla?
 description: Seminario
 
 alt: Hello World Nuxt Content
-
-excerpt: Hello World Nuxt Content
-
-
+# potrebbe essere logo lab?
 imgurl: https://images.pexels.com/photos/2414036/pexels-photo-2414036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
 
 tags: ["hello world"]
 
 date: 8-2-2023
 time: 10:30
+
+people:
+    - Mario F. Pavone
+
+yt_link: https://youtu.be/o_OstveK00E
+slides: resources/slide.pdf
 ---
 
 Il gruppo di ricerca Complex Intelligent Systems (CIS) del Dipartimento di Matematica e Informatica, Università degli Studi di Catania organizza il seminario dal titolo Software Engineering Abstractions for Metaheuristics: a 20 years journey. Il seminario è tenuto dal prof. Luca Di Gaspero, Università degli Studi di Udine.
