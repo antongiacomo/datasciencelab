@@ -86,7 +86,7 @@ function convertDate(date) {
         <hr class="mb-4" />
         <ul>
           <li class="mb-2" v-for="(a, i) in data.article.resources" :key="i">
-            <a href="/resources/file.epub" target="_blank" rel="noopener noreferrer">
+            <a :href="`/resources/${a}`" target="_blank" rel="noopener noreferrer">
               {{ a }}
             </a>
           </li>
