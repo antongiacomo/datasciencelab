@@ -1,20 +1,20 @@
 ---
 title: 'Software Engineering Abstractions for Metaheuristics: a 20 years journey'
-
 alt: Hello World Nuxt Content
+
 # potrebbe essere logo lab?
 imgurl: https://images.pexels.com/photos/2414036/pexels-photo-2414036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
 
 tags: ["hello world"]
-
 date: 8-2-2023
 time: 10:30
-
 people:
-    - Mario F. Pavone
-    - Mario F. Pavona
-yt_link: https://youtu.be/o_OstveK00E
-slides: resources/slide.pdf
+    - name: Mario F. Pavona
+      affiliation: Università degli Studi di Catania
+    - Nicola Bena
+location: Aula Magna
+video_link: https://youtu.be/o_OstveK00E
+resources: ["file.pdf"]
 ---
 
 Il gruppo di ricerca Complex Intelligent Systems (CIS) del Dipartimento di Matematica e Informatica, Università degli Studi di Catania organizza il seminario dal titolo Software Engineering Abstractions for Metaheuristics: a 20 years journey. Il seminario è tenuto dal prof. Luca Di Gaspero, Università degli Studi di Udine.

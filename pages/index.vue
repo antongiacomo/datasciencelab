@@ -15,7 +15,6 @@ const articles = await queryContent("seminars").sort({ createdAt: 1 }).find();
           :path="article._path"
           :img="article.imgurl"
           :title="article.title"
-
           :tags="article.tags"
           :date="article.date"
           :time="article.time"
@@ -30,3 +29,4 @@ h1{
   font-family: 'RotisSemiSerif',serif;
 }
 </style>
+
