@@ -1,9 +1,6 @@
 ---
 title: 'Software Engineering Abstractions for Metaheuristics: a 20 years journey'
 
-# potremmo toglierla?
-description: Seminario
-
 alt: Hello World Nuxt Content
 # potrebbe essere logo lab?
 imgurl: https://images.pexels.com/photos/2414036/pexels-photo-2414036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
@@ -15,7 +12,7 @@ time: 10:30
 
 people:
     - Mario F. Pavone
-
+    - Mario F. Pavona
 yt_link: https://youtu.be/o_OstveK00E
 slides: resources/slide.pdf
 ---

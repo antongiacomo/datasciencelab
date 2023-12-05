@@ -46,6 +46,9 @@ useHead({
         <li class="" v-for="(tag, i) in data.article.tags" :key="i">
           {{ tag }}
         </li>
+        <li class="" v-for="(p, i) in data.article.people" :key="i">
+          {{ p }}
+        </li>
       </ul>
     </header>
     <Hr />
