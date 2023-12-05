@@ -83,7 +83,7 @@ function convertDate(date) {
         <p class="text-3xl spacing tracking-wide font-semibold mt-4 mb-2">
           Allegati
         </p>
-        <hr class="mb-4" />
+      <hr class="mb-4">
         <ul>
           <li class="mb-2" v-for="(a, i) in data.article.resources" :key="i">
             <a :href="`/resources/${a}`" target="_blank" rel="noopener noreferrer">
