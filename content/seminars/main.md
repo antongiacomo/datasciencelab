@@ -16,10 +16,8 @@ location: Aula Magna
 video_link: https://youtu.be/o_OstveK00E
 resources: ["file.pdf"]
 ---
-
-Il gruppo di ricerca Complex Intelligent Systems (CIS) del Dipartimento di Matematica e Informatica, Università degli Studi di Catania organizza il seminario dal titolo Software Engineering Abstractions for Metaheuristics: a 20 years journey. Il seminario è tenuto dal prof. Luca Di Gaspero, Università degli Studi di Udine.
-
-## Abstract del seminario:
+Qui un piccolo abstract
+### Abstract del seminario:
 Differently from other search and optimization paradigms, e.g., branch and bound, the supposed simplicity of metaheuristic methods and the limited availability of modeling tools induces the researchers to build their metaheuristics applications from scratch. On the other hand, the evolution of the techniques (local search, genetic and evolutionary algorithms, hybrids, etc.) seems to make the development of general tools quite impractical.
 
 In 2003, together with Andrea Schaerf, we decided to subvert these stereotypes and we proposed EasyLocal++, an open-source object-oriented framework for local search metaheuristics, with the aim of engineering the development of solvers both at a research and at an industry-ready level. After 20 years the system has evolved (according to the new capabilities of the underlying programming language, i.e., C++) and extended (incorporating further modules to be industry-level) but most of the design choices (or in other words the software abstractions) are still valid nowadays.
