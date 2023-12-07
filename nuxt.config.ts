@@ -1,18 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
-  devtools: {
-    enabled: false,
-
-    timeline: {
-      enabled: true
+  runtimeConfig: {
+    public: {
+      baseURL: 'https://localhost:3000',
     }
   },
-  nitro: {
-    prerender:{
-      failOnError: true,
+  devtools: {
+    enabled: false,
+    timeline: {
+      enabled: true,
     },
-
   },
-  modules: ["@nuxtjs/tailwindcss",'@nuxt/content']
-})
+  nitro: {
+    prerender: {
+      failOnError: true,
+      routes: ["/rss.xml"],
+    },
+    esbuild: {
+      options: {
+        target: "esnext",
+      },
+    },
+  },
+
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
+});

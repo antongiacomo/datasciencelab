@@ -12,6 +12,7 @@ for (let i = 0; i <10; i++) {
       <h1 class="text-4xl text-center" style="">SEMINARS</h1>
     </div>
     <section>
+      <div>PROSSIMI</div>
       <div
         class="w-full max-w-4xl my-4 mx-auto gap-8 auto-rows-fr auto-cols-fr"
       >
@@ -19,7 +20,7 @@ for (let i = 0; i <10; i++) {
           v-for="article in articles"
           :key="article._path"
           :path="article._path"
-          :img="article.imgurl"
+
           :title="article.title"
           :tags="article.tags"
           :date="article.date"

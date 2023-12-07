@@ -72,9 +72,9 @@
   </article>
   <hr class="my-4" />
 </template>
-bìmt-4
+
 <script setup>
-defineProps({
+const props = defineProps({
   path: String,
   title: String,
   tags: Object,
@@ -82,6 +82,7 @@ defineProps({
   time: String,
   author: String,
   location: String,
+
 });
 
 function convertDate(date) {
@@ -91,5 +92,12 @@ function convertDate(date) {
     month: "long",
     day: "numeric",
   });
+}
+
+// Compare the input date with the current date
+if ( (new Date(props.date)) < (new Date())) {
+  console.log('The input date is in the past.');
+} else {
+  console.log('The input date is in the future.');
 }
 </script>

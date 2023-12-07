@@ -18,6 +18,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@nuxt/content": "^2.9.0"
+    "@heroicons/vue": "^2.0.18",
+    "@nuxt/content": "^2.9.0",
+    "rss": "^1.2.2"
   }
 }

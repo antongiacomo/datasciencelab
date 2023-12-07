@@ -1,5 +1,7 @@
 ---
 title: 'Software Engineering Abstractions for Metaheuristics: a 20 years journey'
+description: 'Seminario di Mario F. Pavone'
+
 alt: Hello World Nuxt Content
 
 # potrebbe essere logo lab?
