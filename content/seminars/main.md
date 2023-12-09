@@ -20,7 +20,7 @@ people:
       affiliation: Università degli Studi di Milano 
       bio: Marco Anisetti is Full Professor at the Università degli Studi di Milano. His research interests are in the area of computational intelligence, and its application to the design and evaluation of complex systems. He has been investigating innovative solutions in the area of cloud security assurance evaluation. In this area he defined a new scheme for continuous and incremental cloud security certification, based on distributed assurance evaluation architecture.
       homepage: https://anisetti.di.unimi.it
-location: Online
+location: https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_N2Y4YTliODItYzRjMC00NTJlLTliMTYtNTc5NDNlMGZmNWMw%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%252213b55eef-7018-4674-a3d7-cc0db06d545c%2522%252c%2522Oid%2522%253a%25226afb8774-30dd-49f0-87e8-2e09591d0107%2522%257d%26anon%3Dtrue&type=meetup-join&deeplinkId=0cc1955a-ead0-44be-aa58-d670e7a8bf27&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true
 video_link: https://youtu.be/o_OstveK00E
 resources: ["file.pdf"]
 ---
