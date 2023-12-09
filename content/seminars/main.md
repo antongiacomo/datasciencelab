@@ -1,32 +1,34 @@
 ---
-title: 'Software Engineering Abstractions for Metaheuristics: a 20 years journey'
-description: 'Seminario di Mario F. Pavone'
+title: 'Smart Deployment Solution for PNRR MUSA services in Edge-Cloud Continuum'
+description: 'Deployment of Big Data and AI-based services in modern distributed systems, at the basis of the innovation ecosystem developed as part of the PNRRR project MUSA'
+type: academic # other types: young, academy
 
 alt: Hello World Nuxt Content
 
-# potrebbe essere logo lab?
-imgurl: https://images.pexels.com/photos/2414036/pexels-photo-2414036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+# potrebbe essere logo lab se l'immagine non carica?
+imgurl: https://musascarl.it/wp-content/uploads/2023/08/Tavola-disegno-4.png
 
-tags: ["hello world"]
-date: 8-2-2023
-time: 10:30
+tags: ["pnrr", "edge-cloud", "distributed systems"]
+date: 27-11-2023
+time: 11:00
 people:
-    - name: Mario F. Pavona
-      affiliation: Università degli Studi di Catania
-    - Nicola Bena
-location: Aula Magna
+    - name: Claudio A. Ardagna
+      affiliation: Università degli Studi di Milano
+      bio: Claudio A. Ardagna is Full Professor with the Università degli Studi di Milano, the Director of the CINI National Lab on Data Science, and co-founder of Moon Cloud srl. His research interests are in the areas of cloud-edge security and assurance, distributed system certification, machine learning, and data science, where he published more than 150 contributions in international journals, conference/workshop proceedings, and chapters in international books. He is the winner of the ERCIM (European Research Consortium for Informatics and Mathematics) WG STM 2009 Award for the Best Ph.D. Thesis on Security and Trust Management. He has been visiting professor at Université Jean Moulin Lyon 3 and visiting researcher at Beijing University of Posts and Telecommunications, Khalifa University, George Mason University. He is member of the Steering Committee of IEEE Transactions on Cloud Computing, member of the editorial board of the IEEE Transactions on Cloud Computing and IEEE Transactions on Services Computing, and secretary of the IEEE Technical Committee on Services Computing. He is General Chair for IEEE ICWS 2024.
+      homepage: https://ardagna.di.unimi.it
+    - name: Marco Anisetti
+      affiliation: Università degli Studi di Milano 
+      bio: Marco Anisetti is Full Professor at the Università degli Studi di Milano. His research interests are in the area of computational intelligence, and its application to the design and evaluation of complex systems. He has been investigating innovative solutions in the area of cloud security assurance evaluation. In this area he defined a new scheme for continuous and incremental cloud security certification, based on distributed assurance evaluation architecture.
+      homepage: https://anisetti.di.unimi.it
+location: Online
 video_link: https://youtu.be/o_OstveK00E
 resources: ["file.pdf"]
 ---
-Qui un piccolo abstract
-### Abstract del seminario:
-Differently from other search and optimization paradigms, e.g., branch and bound, the supposed simplicity of metaheuristic methods and the limited availability of modeling tools induces the researchers to build their metaheuristics applications from scratch. On the other hand, the evolution of the techniques (local search, genetic and evolutionary algorithms, hybrids, etc.) seems to make the development of general tools quite impractical.
 
-In 2003, together with Andrea Schaerf, we decided to subvert these stereotypes and we proposed EasyLocal++, an open-source object-oriented framework for local search metaheuristics, with the aim of engineering the development of solvers both at a research and at an industry-ready level. After 20 years the system has evolved (according to the new capabilities of the underlying programming language, i.e., C++) and extended (incorporating further modules to be industry-level) but most of the design choices (or in other words the software abstractions) are still valid nowadays.
+## Abstract
 
-In this presentation I will briefly survey the tools for metaheuristic development and I will present the abstractions that are incorporated into EasyLocal++, exhibiting some software engineering principles behind them. I will show how useful is to work with an abstract framework, also in terms of providing different access points to the solver.
+Abstract: Modern data processing applications are increasingly designed as a composition of micro and nano services and are progressively adopted to handle critical scenarios where advanced Quality of Services (QoS) such as low latency, security, and privacy are fundamental. Nowadays, there is a clear trend in adopting composition execution plans that span from the far edge to the cloud. With the advent of 5G, this edge cloud continuum is enriched with edge computation facilities provided by telco operators improving its capabilities to support advanced QoS. Actual deployment solutions for compositions focus mainly on resource allocation (i.e., CPU, memory, and storage), falling short of addressing advanced QoS and complex Edge Cloud continuum infrastructures.
 
+Project Multilayered Urban Sustainability Action (MUSA), an innovation ecosystem funded by PNRR in Italy, under its Spoke 2 aims to the design, implement, and deploy a highly innovative, secure digital platform for Big Data collection, sharing, and analysis suitable for both clinical practices, health services, and life science applications. The MUSA digital platform is based on an advanced Edge-Cloud Continuum involving 5G network communications and edge nodes. It supports the creation and smart deployment of advanced data processing pipelines built on AI/ML services and Big Data analytics, which continuously support critical QoS requirements.
 
-Il seminario si terrà venerdì 13 gennaio alle 15:30 su Teams, con link disponibile su richiesta.
-
-News by prof. Mario F. Pavone, Dipartimento di Matematica e Informatica, Università degli Studi di Catania.
+This talk presents the MUSA QoS-aware deployment solution for Edge-Cloud Continuum. The proposed solution compares the QoS requirements with the capabilities of a given edge cloud continuum to find, generate, and execute suitable deployment recipes. It is also instrumented by assurance controls to continuously verify the requested QoS. The talk finally presents the next steps and activities along two main axes: smart deployer for 5G and Advanced testing infrastructure.
