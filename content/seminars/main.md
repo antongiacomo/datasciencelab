@@ -8,9 +8,15 @@ alt: Hello World Nuxt Content
 # potrebbe essere logo lab se l'immagine non carica?
 imgurl: https://musascarl.it/wp-content/uploads/2023/08/Tavola-disegno-4.png
 
+<<<<<<< Updated upstream
 tags: ["pnrr", "edge-cloud", "distributed systems"]
 date: 27-11-2023
 time: 11:00
+=======
+tags: ["hello world"]
+date: 2-2-2024
+time: 10:30
+>>>>>>> Stashed changes
 people:
     - name: Claudio A. Ardagna
       affiliation: Università degli Studi di Milano

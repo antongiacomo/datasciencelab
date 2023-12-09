@@ -94,10 +94,5 @@ function convertDate(date) {
   });
 }
 
-// Compare the input date with the current date
-if ( (new Date(props.date)) < (new Date())) {
-  console.log('The input date is in the past.');
-} else {
-  console.log('The input date is in the future.');
-}
+
 </script>

@@ -1,21 +1,37 @@
 <script setup>
+import {
+  ClockIcon,
+  MapPinIcon,
+  CalendarIcon,
+  ArrowLongLeftIcon,
+} from "@heroicons/vue/24/outline";
+
 const { path } = useRoute();
-import { ClockIcon,MapPinIcon,CalendarIcon,ArrowLongLeftIcon } from '@heroicons/vue/24/outline'
+const router = useRouter();
 
-const { data } = await useAsyncData(`content-${path}`, async () => {
-  let article = queryContent().where({ _path: path }).findOne();
+definePageMeta({
+  middleware: [
+    function (from, to) {
+      // navigateTo("/");
+    },
+  ],
+});
 
-  let surround = queryContent()
-    .only(["_path", "title", "description"])
-    .sort({ date: 1 })
-    .findSurround(path);
+const { data, error } = await useAsyncData(`${path}`, async () => {
+  let article = await queryContent().where({ _path: path }).findOne();
 
   return {
-    article: await article,
-    surround: await surround,
+    article,
   };
 });
-const [prev, next] = data.value.surround;
+
+if (error.value) {
+  throw createError({
+    statusCode: 404,
+    message: "Page not found",
+  })
+}
+
 
 useHead({
   title: data.value.article.title,
@@ -42,9 +58,7 @@ function convertDate(date) {
     <div class="flex gap-x-1 py-8 max-w-5xl m-auto">
       <ArrowLongLeftIcon class="h-6 w-6" />
       <nuxt-link class="w-full h-full" to="/">
-      <span class="hover:underline underline-offset-4"
-        >Go Back</span
-      >
+        <span class="hover:underline underline-offset-4">Go Back</span>
       </nuxt-link>
     </div>
   </div>
@@ -54,7 +68,7 @@ function convertDate(date) {
         {{ data.article.title }}
       </h1>
 
-      <Hr class="border-gray-300" />
+      <hr class="border-gray-300" />
 
       <div class="font-normal text-lg my-10">
         <span>
@@ -143,7 +157,7 @@ function convertDate(date) {
 
       <section class="w-full col-span-2">
         <article
-          class="col-span-full max-w-prose   prose md:prose-lg lg:prose-xl w-full m-auto prose-a:no-underline"
+          class="col-span-full max-w-prose prose md:prose-lg lg:prose-xl w-full m-auto prose-a:no-underline"
         >
           <ContentRenderer :value="data.article">
             <ContentRendererMarkdown :value="data.article" />
@@ -153,7 +167,7 @@ function convertDate(date) {
     </div>
 
     <!-- previous and Next blogs -->
-    <PreviousNext :prev="prev" :next="next" />
-    <Hr />
+    <!-- <PreviousNext :prev="prev" :next="next" /> -->
+    <hr />
   </main>
 </template>
