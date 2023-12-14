@@ -91,9 +91,20 @@ function convertDate(date) {
         </div>
         <div class="flex items-center gap-1">
           <MapPinIcon class="h-6 w-6 stroke-2" />
-          <span class="text-xl text-left font-medium" style="">
-            {{ data.article.location }}</span
-          >
+          <div class="text-xl text-left font-medium" style="">
+            <!-- check if locations contains a link to a web meeting -->
+            <span v-if="data.article.location.includes('http')">
+              <a
+                :href="data.article.location"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Online
+              </a>
+            </span>
+            <span v-else>{{ data.article.location }}</span>
+            </div>
+
         </div>
       </div>
     </div>
@@ -116,6 +127,10 @@ function convertDate(date) {
                 <span class="font-semibold" v-if="p.affiliation">{{
                   p.affiliation
                 }}</span>
+
+                <p class="mt-1 text-sm" v-if="p.bio">{{
+                  p.bio
+                }}</p>
               </li>
             </ul>
           </template>

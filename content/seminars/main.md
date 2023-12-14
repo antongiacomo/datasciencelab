@@ -9,7 +9,7 @@ alt: Hello World Nuxt Content
 imgurl: https://musascarl.it/wp-content/uploads/2023/08/Tavola-disegno-4.png
 
 tags: ["pnrr", "edge-cloud", "distributed systems"]
-date: 27-11-2023
+date: 02-27-2024
 time: 11:00
 people:
     - name: Claudio A. Ardagna

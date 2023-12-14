@@ -64,7 +64,21 @@
               />
             </svg>
 
-            <span class="text-left font-medium" style=""> {{ location }}</span>
+            <div class="text-xl text-left font-medium" style="">
+            <!-- check if locations contains a link to a web meeting -->
+            <span v-if="location.includes('http')">
+              <a
+              class="underline"
+                :href="location"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Online
+              </a>
+            </span>
+            <!-- else show location-->
+            <span v-else>{{ location }}</span>
+            </div>
           </div>
         </div>
       </div>
