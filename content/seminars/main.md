@@ -3,13 +3,13 @@ title: 'Smart Deployment Solution for PNRR MUSA services in Edge-Cloud Continuum
 description: 'Deployment of Big Data and AI-based services in modern distributed systems, at the basis of the innovation ecosystem developed as part of the PNRRR project MUSA'
 type: academic # other types: young, academy
 
-alt: Hello World Nuxt Content
+alt: "Smart Deployment Solution for PNRR MUSA services in Edge-Cloud Continuum"
 
 # potrebbe essere logo lab se l'immagine non carica?
 imgurl: https://musascarl.it/wp-content/uploads/2023/08/Tavola-disegno-4.png
 
 tags: ["pnrr", "edge-cloud", "distributed systems"]
-date: 02-27-2024
+date: 10-12-2023
 time: 11:00
 people:
     - name: Claudio A. Ardagna
