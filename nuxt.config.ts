@@ -15,8 +15,6 @@ export default defineNuxtConfig({
   nitro: {
 
     prerender: {
-      failOnError: false,
-      routes: ["/rss.xml"],
       ignore: ["/"]
     },
     esbuild: {
