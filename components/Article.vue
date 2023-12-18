@@ -1,5 +1,5 @@
 <script setup>
-import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
+import { CalendarIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 const props = defineProps({
   path: String,
   title: String,

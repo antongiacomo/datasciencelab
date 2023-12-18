@@ -1,10 +1,11 @@
 <script setup>
+
 import {
   ClockIcon,
   MapPinIcon,
   CalendarIcon,
   ArrowLongLeftIcon,
-  PlayCircleIcon,
+
   PaperClipIcon,
   AcademicCapIcon,
   LinkIcon
@@ -106,7 +107,7 @@ useHead({
             target="_blank"
             rel="noopener noreferrer"
           >
-          <Pill :icon="LinkIcon" :video_link="data.article.video_link"></Pill>
+          <LinkPill :icon="LinkIcon" :video_link="data.article.video_link"></LinkPill>
           </nuxt-link>
         </div>
       </div>

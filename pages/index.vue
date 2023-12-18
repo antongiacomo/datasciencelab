@@ -20,12 +20,10 @@ var articlesPast = articles.value
 var articlesFuture = articles.value.filter((article) => true /*!isPast(article.date)*/);
 
 function monthName(date) {
-  const da = moment(date, "DD-MM-YYYY").toDate();
-  return da.toLocaleString("default", {
-    month: "long",
-    year: "numeric",
-  });
+  return moment(date, "DD-MM-YYYY").format("MMMM YYYY");
+
 }
+
 </script>
 
 <template>
