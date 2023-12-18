@@ -15,7 +15,7 @@ people:
       affiliation: Università degli Studi di Catania
     - Nicola Bena
 location: Aula Magna
-video_link: https://youtu.be/o_OstveK00E
+
 resources: ["file.pdf"]
 ---
 Qui un piccolo abstract

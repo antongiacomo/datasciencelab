@@ -5,7 +5,7 @@ import {
   CalendarIcon,
   ArrowLongLeftIcon,
 } from "@heroicons/vue/24/outline";
-
+// const { prev, next } = useContent();
 const { path } = useRoute();
 const router = useRouter();
 
@@ -29,9 +29,8 @@ if (error.value) {
   throw createError({
     statusCode: 404,
     message: "Page not found",
-  })
+  });
 }
-
 
 useHead({
   title: data.value.article.title,
@@ -103,8 +102,7 @@ function convertDate(date) {
               </a>
             </span>
             <span v-else>{{ data.article.location }}</span>
-            </div>
-
+          </div>
         </div>
       </div>
     </div>
@@ -128,9 +126,7 @@ function convertDate(date) {
                   p.affiliation
                 }}</span>
 
-                <p class="mt-1 text-sm" v-if="p.bio">{{
-                  p.bio
-                }}</p>
+                <p class="mt-1 text-sm" v-if="p.bio">{{ p.bio }}</p>
               </li>
             </ul>
           </template>
@@ -180,9 +176,11 @@ function convertDate(date) {
         </article>
       </section>
     </div>
-
+    <!-- <div>
+      <NuxtLink v-if="prev" :to="prev._path">{{ prev.title }}</NuxtLink>
+      <NuxtLink v-if="next" :to="next._path">{{ next.title }}</NuxtLink>
+    </div> -->
     <!-- previous and Next blogs -->
     <!-- <PreviousNext :prev="prev" :next="next" /> -->
-    <hr />
   </main>
 </template>
