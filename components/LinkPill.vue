@@ -1,8 +1,8 @@
 <script setup>
-import { CheckIcon, XMarkIcon } from "@heroicons/vue/24/outline";
+
 const props = defineProps({
   video_link: String,
-  icon: Object,
+  icon: Function,
 });
 </script>
 <template>

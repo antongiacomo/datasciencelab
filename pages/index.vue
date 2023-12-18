@@ -4,7 +4,7 @@ import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
 import ArticleCard from "~/components/ArticleCard.vue";
 import Article from "~/components/Article.vue";
 // get all the articles inside the content folder
-var {data: articles} = await  queryContent("seminars").sort({ createdAt: 1 }).find();
+var articles = await  queryContent("seminars").sort({ createdAt: 1 }).find();
 
 var articlesPast = articles
   .filter((article) => isPast(article.date))
