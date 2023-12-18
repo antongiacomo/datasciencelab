@@ -4,9 +4,9 @@ import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
 import ArticleCard from "~/components/ArticleCard.vue";
 import Article from "~/components/Article.vue";
 // get all the articles inside the content folder
-var {data: articles} = await useAsyncData( () => queryContent("seminars").sort({ createdAt: 1 }).find());
+var {data: articles} = await  queryContent("seminars").sort({ createdAt: 1 }).find();
 
-var articlesPast = articles.value
+var articlesPast = articles
   .filter((article) => isPast(article.date))
   .reduce((grouped, object) => {
     const { date } = object;
@@ -17,7 +17,7 @@ var articlesPast = articles.value
     return grouped;
   }, {});
 
-var articlesFuture = articles.value.filter((article) => true /*!isPast(article.date)*/);
+var articlesFuture = articles.filter((article) => true /*!isPast(article.date)*/);
 
 function monthName(date) {
   return moment(date, "DD-MM-YYYY").format("MMMM YYYY");
