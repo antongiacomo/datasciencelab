@@ -12,10 +12,10 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    prerender: {
-      failOnError: true,
-      routes: ["/rss.xml"],
-    },
+    // prerender: {
+    //   failOnError: true,
+    //   routes: ["/rss.xml"],
+    // },
     esbuild: {
       options: {
         target: "esnext",
