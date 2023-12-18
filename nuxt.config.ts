@@ -9,13 +9,16 @@ export default defineNuxtConfig({
     enabled: false,
     timeline: {
       enabled: true,
+
     },
   },
   nitro: {
-    // prerender: {
-    //   failOnError: true,
-    //   routes: ["/rss.xml"],
-    // },
+
+    prerender: {
+      failOnError: false,
+      routes: ["/rss.xml"],
+      ignore: ["/"]
+    },
     esbuild: {
       options: {
         target: "esnext",
