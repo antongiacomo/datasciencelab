@@ -15,7 +15,8 @@ export default defineNuxtConfig({
   nitro: {
 
     prerender: {
-      ignore: ["/"]
+      failOnError: false,
+
     },
     esbuild: {
       options: {
