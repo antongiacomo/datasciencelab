@@ -15,7 +15,7 @@ const props = defineProps({
 </script>
 <template>
   <article class="w-full flex items-center justify-start antialiased">
-    <nuxt-link class="w-full h-full" :to="path">
+    <div class="w-full h-full" :to="path">
       <div
         class="w-full h-full rounded-lg bg-white py-4"
         :class="{ 'text-indigo-400': future }"
@@ -42,6 +42,6 @@ const props = defineProps({
           <Pill :video_link="video_link"></Pill>
         </div>
       </div>
-    </nuxt-link>
+    </div>
   </article>
 </template>

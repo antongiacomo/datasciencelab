@@ -93,13 +93,13 @@ function convertDate(date) {
           <div class="text-xl text-left font-medium" style="">
             <!-- check if locations contains a link to a web meeting -->
             <span v-if="data.article.location.includes('http')">
-              <a
+              <nuxt-link
                 :href="data.article.location"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Online
-              </a>
+              </nuxt-link>
             </span>
             <span v-else>{{ data.article.location }}</span>
           </div>
@@ -140,13 +140,13 @@ function convertDate(date) {
                 v-for="(a, i) in data.article.resources"
                 :key="i"
               >
-                <a
+                <nuxt-link
                   :href="`/resources/${a}`"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {{ a }}
-                </a>
+                </nuxt-link>
               </li>
             </ul>
           </template>
@@ -155,13 +155,13 @@ function convertDate(date) {
         <SidebarElement>
           <template #header>Video</template>
           <template #default>
-            <a
+            <nuxt-link
               :href="data.article.video_link"
               target="_blank"
               rel="noopener noreferrer"
             >
               {{ data.article.video_link }}
-            </a>
+            </nuxt-link>
           </template>
         </SidebarElement>
       </header>
@@ -176,11 +176,5 @@ function convertDate(date) {
         </article>
       </section>
     </div>
-    <!-- <div>
-      <NuxtLink v-if="prev" :to="prev._path">{{ prev.title }}</NuxtLink>
-      <NuxtLink v-if="next" :to="next._path">{{ next.title }}</NuxtLink>
-    </div> -->
-    <!-- previous and Next blogs -->
-    <!-- <PreviousNext :prev="prev" :next="next" /> -->
   </main>
 </template>

@@ -1,4 +1,3 @@
-
 <script setup>
 import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
 
@@ -11,14 +10,14 @@ const props = defineProps({
   author: String,
   location: String,
   future: Boolean,
-  people: Array
+  people: Array,
 });
-
-
 </script>
 
 <template>
-  <article class="rounded-lg w-full my-10 flex items-center antialiased ml-2 pb-4">
+  <article
+    class="rounded-lg w-full my-10 flex items-center antialiased ml-2 pb-4"
+  >
     <nuxt-link class="w-96 h-full" :to="path">
       <div
         class="w-full h-full rounded-xl shadow-lg bg-white border-2 border-blue-900 px-6 py-3 pb-6"
@@ -27,12 +26,11 @@ const props = defineProps({
           {{ title }}
         </div>
         <div class="flex gap-2 text-lg text-gray-400 font-medium">
-          <div>{{  people.map(person => person.name).join(', ') }}</div>
-
+          <div>{{ people.map((person) => person.name).join(", ") }}</div>
         </div>
         <div class="flex mt-4 gap-6 uppercase s">
           <div class="flex items-center gap-1 font-medium">
-           <CalendarIcon class="h-6 w-6 stroke-2" />
+            <CalendarIcon class="h-6 w-6 stroke-2" />
 
             <span class="text-left font-medium" style="">
               {{ convertDate(date) }}</span
@@ -59,23 +57,21 @@ const props = defineProps({
           </svg>
 
           <div class="text-xl text-left font-medium" style="">
-            <!-- check if locations contains a link to a web meeting -->
             <span v-if="location.includes('http')">
-              <a
+              <div
                 class="uppercase text-base font-semibold text-blue-700"
                 :href="location"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Partecipa
-              </a>
+              </div>
             </span>
-            <!-- else show location-->
+
             <span v-else>{{ location }}</span>
           </div>
         </div>
       </div>
     </nuxt-link>
   </article>
-
 </template>

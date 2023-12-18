@@ -1,7 +1,7 @@
 <script setup>
 import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
 import ArticleCard from "~/components/ArticleCard.vue";
-
+import Article from "~/components/Article.vue";
 // get all the articles inside the content folder
 var articles = await queryContent("seminars").sort({ createdAt: 1 }).find();
 
@@ -29,7 +29,6 @@ function monthName(date) {
     year: "numeric",
   });
 }
-
 </script>
 
 <template>
@@ -41,7 +40,7 @@ function monthName(date) {
       >
         CINI Big Data Lab
       </h1>
-      <h1 class="text-6xl  max-w-5xl tracking-wide mx-auto font-black" style="">
+      <h1 class="text-6xl max-w-5xl tracking-wide mx-auto font-black" style="">
         Seminars
       </h1>
     </div>
@@ -63,21 +62,19 @@ function monthName(date) {
           :author="article.author"
           :location="article.location"
           :people="article.people"
-
-
         />
         <div class="flex gap-4 items-center my-10 text-blue-800">
           <ClockIcon class="h-8 w-8 stroke-2" />
           <h1 class="text-3xl font-black">Past</h1>
         </div>
         <div class="">
-          <div class="" v-for="(articles, date) in articlesPast" :key="date">
+          <div class="" v-for="(articlesMonth, date) in articlesPast">
             <h1 class="text-xl font-extrabold mt-6 mb-2">
               {{ monthName(date) }}
             </h1>
             <div class="flex flex-col divide-y divide-black">
               <Article
-                v-for="article in articles"
+                v-for="article in articlesMonth"
                 :key="article._path"
                 :path="article._path"
                 :future="false"
