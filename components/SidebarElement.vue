@@ -1,10 +1,15 @@
+<script setup>
+import {
+
+  PaperClipIcon
+} from "@heroicons/vue/24/outline";
+</script>
 <template>
-  <div class="mt-2">
-    <p class="text-xl spacing tracking-wide uppercase font-semibold mt-4 mb-2">
+  <div class="my-10">
+    <p class="text-2xl spacing tracking-wide uppercase font-semibold mb-4">
       <slot name="header"></slot>
     </p>
-
     <slot></slot>
-    <hr class="mt-6" />
+    <hr class="my-2"/>
   </div>
 </template>

@@ -26,9 +26,9 @@ video_link: https://youtu.be/o_OstveK00E
 resources: ["file.pdf"]
 ---
 
-## Abstract
+### Abstract
 
-Abstract: Modern data processing applications are increasingly designed as a composition of micro and nano services and are progressively adopted to handle critical scenarios where advanced Quality of Services (QoS) such as low latency, security, and privacy are fundamental. Nowadays, there is a clear trend in adopting composition execution plans that span from the far edge to the cloud. With the advent of 5G, this edge cloud continuum is enriched with edge computation facilities provided by telco operators improving its capabilities to support advanced QoS. Actual deployment solutions for compositions focus mainly on resource allocation (i.e., CPU, memory, and storage), falling short of addressing advanced QoS and complex Edge Cloud continuum infrastructures.
+Modern data processing applications are increasingly designed as a composition of micro and nano services and are progressively adopted to handle critical scenarios where advanced Quality of Services (QoS) such as low latency, security, and privacy are fundamental. Nowadays, there is a clear trend in adopting composition execution plans that span from the far edge to the cloud. With the advent of 5G, this edge cloud continuum is enriched with edge computation facilities provided by telco operators improving its capabilities to support advanced QoS. Actual deployment solutions for compositions focus mainly on resource allocation (i.e., CPU, memory, and storage), falling short of addressing advanced QoS and complex Edge Cloud continuum infrastructures.
 
 Project Multilayered Urban Sustainability Action (MUSA), an innovation ecosystem funded by PNRR in Italy, under its Spoke 2 aims to the design, implement, and deploy a highly innovative, secure digital platform for Big Data collection, sharing, and analysis suitable for both clinical practices, health services, and life science applications. The MUSA digital platform is based on an advanced Edge-Cloud Continuum involving 5G network communications and edge nodes. It supports the creation and smart deployment of advanced data processing pipelines built on AI/ML services and Big Data analytics, which continuously support critical QoS requirements.
 

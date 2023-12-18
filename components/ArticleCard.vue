@@ -16,9 +16,9 @@ const props = defineProps({
 
 <template>
   <article
-    class="rounded-lg w-full my-10 flex items-center antialiased ml-2 pb-4"
+    class="rounded-lg w-full flex items-center antialiased  pb-4"
   >
-    <nuxt-link class="w-96 h-full" :to="path">
+    <nuxt-link class="w-full h-full" :to="path">
       <div
         class="w-full h-full rounded-xl shadow-lg bg-white border-2 border-blue-900 px-6 py-3 pb-6"
       >
@@ -33,8 +33,7 @@ const props = defineProps({
             <CalendarIcon class="h-6 w-6 stroke-2" />
 
             <span class="text-left font-medium" style="">
-              {{ convertDate(date) }}</span
-            >
+              {{ convertDate(date) }}</span>
           </div>
           <div class="flex items-center gap-1">
             <ClockIcon class="h-6 w-6 stroke-2" />
@@ -42,7 +41,7 @@ const props = defineProps({
           </div>
         </div>
         <div
-          class="mt-4 flex w-min items-center px-4 gap-1 border border-blue-700 bg-blue-50 rounded-full"
+          class="mt-4 w-min whitespace-nowrap flex  items-center px-4 gap-1 border border-blue-700 bg-blue-50 rounded-full"
         >
           <svg
             fill="none"
@@ -56,17 +55,17 @@ const props = defineProps({
             />
           </svg>
 
-          <div class="text-xl text-left font-medium" style="">
-            <span v-if="location.includes('http')">
+          <div class=" text-xl text-left font-medium" style="">
+            <div v-if="location.includes('http')">
               <div
-                class="uppercase text-base font-semibold text-blue-700"
+                class="w-full uppercase text-base font-semibold text-blue-700"
                 :href="location"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Partecipa
               </div>
-            </span>
+            </div>
 
             <span v-else>{{ location }}</span>
           </div>
