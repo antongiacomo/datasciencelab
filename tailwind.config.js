@@ -7,6 +7,12 @@ export default {
   safelist: [
   {
     pattern: /bg-(red|green|blue)-(200|600|800)/,
+  },
+  {
+    pattern: /border-(red|green|blue)-(200|600|800)/,
+  },
+  {
+    pattern: /text-(red|green|blue)-(200|600|800)/,
   }],
 
   plugins: [
