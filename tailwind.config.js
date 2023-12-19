@@ -4,7 +4,11 @@ export default {
   theme: {
     extend: {},
   },
-  safelist: ['bg-blue-200','border-blue-600', 'text-blue-800'],
+  safelist: [
+  {
+    pattern: /bg-(red|green|blue)-(200|600|800)/,
+  }],
+
   plugins: [
     require('@tailwindcss/typography'),
     // ...
