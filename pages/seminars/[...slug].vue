@@ -85,20 +85,20 @@ useHead({
           >
         </div>
         <div v-if="!isPast(data.article.date)" class="flex items-center gap-1">
-          <MapPinIcon class="h-6 w-6 stroke-2" />
-          <div class="text-xl text-left font-medium" style="">
-            <!-- check if locations contains a link to a web meeting -->
-            <div v-if="data.article.location.includes('http')">
+
+
+
               <nuxt-link
+              v-if="data.article.location.includes('http')"
                 :href="data.article.location"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Online
+              <Pill  color="blue" :icon="LinkIcon">JOIN</Pill>
               </nuxt-link>
-            </div>
+
             <span v-else>{{ data.article.location }}</span>
-          </div>
+
         </div>
         <div v-if="data.article.video_link">
           <nuxt-link
@@ -107,7 +107,8 @@ useHead({
             target="_blank"
             rel="noopener noreferrer"
           >
-          <LinkPill :icon="LinkIcon" :video_link="data.article.video_link"></LinkPill>
+
+          <Pill color="green" :icon="LinkIcon">VIDEO</Pill>
           </nuxt-link>
         </div>
       </div>

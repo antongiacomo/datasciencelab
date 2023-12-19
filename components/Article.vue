@@ -1,5 +1,5 @@
 <script setup>
-import { CalendarIcon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { CalendarIcon,CheckIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 const props = defineProps({
   path: String,
   title: String,
@@ -34,8 +34,10 @@ const props = defineProps({
                 {{ convertDate(date) }}</span
               >
             </div>
+            <Pill v-if="video_link" color="green" :icon="CheckIcon">VIDEO AVAILABLE</Pill>
+            <Pill v-else color="red" :icon="XMarkIcon">VIDEO NOT AVAILABLE</Pill>
 
-            <Pill :video_link="video_link"></Pill>
+
           </div>
         </div>
       </div>

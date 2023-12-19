@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {},
   },
+  safelist: ['bg-blue-200','border-blue-600', 'text-blue-800'],
   plugins: [
     require('@tailwindcss/typography'),
     // ...

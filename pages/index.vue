@@ -17,7 +17,7 @@ var articlesPast = articles.value
     return grouped;
   }, {});
 
-var articlesFuture = articles.value.filter((article) => true /*!isPast(article.date)*/);
+var articlesFuture = articles.value.filter((article) => !isPast(article.date));
 
 function monthName(date) {
   return moment(date, "DD-MM-YYYY").format("MMMM YYYY");
