@@ -3,7 +3,8 @@
 # To get started with Nuxt see: https://nuxtjs.org/docs/get-started/installation
 #
 name: Deploy Nuxt site to Pages
-
+env: 
+  NUXT_APP_BASE_URL: /datasciencelab/
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -25,7 +26,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
+  # Build 
   build:
     runs-on: ubuntu-latest
     steps:
