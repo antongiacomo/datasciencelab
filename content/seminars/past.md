@@ -1,5 +1,5 @@
 ---
-title: 'Futre'
+title: 'First Seminar on Data Science'
 description: 'Deployment of Big Data and AI-based services in modern distributed systems, at the basis of the innovation ecosystem developed as part of the PNRRR project MUSA'
 type: academic # other types: young, academy
 
