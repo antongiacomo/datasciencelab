@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      baseURL: 'https://localhost:3000',
+      baseURL: 'https://localhost:3000/datasciencelab',
     }
   },
   devtools: {
@@ -25,5 +25,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "nuxt-lodash", "@vueuse/nuxt"],
 });

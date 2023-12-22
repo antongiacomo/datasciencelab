@@ -25,7 +25,7 @@ const props = defineProps({
         <div class="my-2 text-xl py-0 font-bold leading-tight">
           {{ title }}
         </div>
-        <div class="flex gap-2 text-lg text-gray-400 font-medium">
+        <div class="flex gap-2 text-lg text-gray-500 font-medium">
           <div>{{ people.map((person) => person.name).join(", ") }}</div>
         </div>
         <div class="flex my-4 gap-6 uppercase s">
