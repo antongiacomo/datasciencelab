@@ -6,7 +6,7 @@ const props = defineProps({
 
 <template>
 
-  <span class="font-semibold text-xl " v-if="person?.name">{{
+  <span class="font-semibold text-xl " v-if="person?.name" :id="person?.name">{{
     person.name
   }}</span>
   <span v-else>{{ person }}</span>
