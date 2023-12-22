@@ -54,21 +54,21 @@ useHead({
   <div class="w-full bg-blue-100 sticky top-0 z-10">
     <div class="max-w-5xl m-auto flex gap-8 items-center py-4">
       <div class="flex gap-x-1 ">
-        <ArrowLongLeftIcon class="h-6 w-6" />
-        <nuxt-link class="w-full h-full" to="/">
-          <span class="hover:underline underline-offset-4">Go Back</span>
+        <ArrowLongLeftIcon class="size-6 shrink-0" />
+        <nuxt-link class="w-full h-full shrink-0" to="/">
+          <span class="hover:underline underline-offset-4 ">Go Back</span>
         </nuxt-link>
       </div>
-      <span
+      <div
         v-if="!targetIsVisible"
-        class="hover:underline underline-offset-4 text-lg font-medium"
-        >{{ data.article.title }}</span
+        class="hover:underline underline-offset-4 text-lg font-medium text-ellipsis overflow-hidden whitespace-nowrap"
+        >{{ data.article.title }}</div
       >
     </div>
   </div>
-  <div class="bg-blue-100 py-10" ref="target">
+  <div class="bg-blue-100 py-10" >
     <div class="p-4 max-w-5xl m-auto">
-      <h1 class="text-5xl text-left font-bold leading-tight" style="">
+      <h1 class="text-5xl text-left font-bold leading-tight" ref="target">
         {{ data.article.title }}
       </h1>
       <div class="mt-2 flex gap-2 text-xl text-gray-500 font-medium">

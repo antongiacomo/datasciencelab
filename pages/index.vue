@@ -4,31 +4,9 @@ import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
 import ArticleCard from "~/components/ArticleCard.vue";
 import Article from "~/components/Article.vue";
 
-// get all the articles inside the content folder
-var { data: articles } = await useAsyncData(() =>
-  queryContent("seminars").sort({ createdAt: 1 }).find()
-);
 
-
-
-const search = ref("");
-
-var articles2 = computed(() =>
-  articles.value.filter((article) =>
-    article.title.toLowerCase().includes(search.value.toLowerCase())
-  )
-);
-
-var articlesPast = computed(() =>
-  useGroupBy(
-    articles2.value.filter((article) => isPast(article.date)),
-    "date"
-  )
-);
-
-var articlesFuture = computed(() =>
-  articles2.value.filter((article) => !isPast(article.date))
-);
+const { fetchArticles, articlesFuture,articlesPast, search } = useArticles();
+await fetchArticles();
 
 function monthName(date) {
   return moment(date, "DD-MM-YYYY").format("MMMM YYYY");
@@ -36,16 +14,16 @@ function monthName(date) {
 </script>
 
 <template>
-  <div class="">
+  <div >
     <div class="pt-16 px-4 pb-4 bg-blue-100">
       <div class="max-w-5xl mx-auto">
         <h2
           class="text-3xl mb-3 font-medium hover:underline transition-all duration-300 cursor-pointer"
-          style=""
+
         >
           CINI Big Data Lab
         </h2>
-        <h1 class="text-6xl tracking-wide mx-auto font-black" style="">
+        <h1 class="text-6xl tracking-wide mx-auto font-black">
           Seminars
         </h1>
         <input type="text" placeholder="Filter Articles" v-model="search" class="w-full mt-4 p-4 rounded" />
