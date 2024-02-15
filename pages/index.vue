@@ -21,7 +21,7 @@ function monthName(date) {
           class="text-3xl mb-3 font-medium hover:underline transition-all duration-300 cursor-pointer"
 
         >
-          CINI Big Data Lab
+        CINI Lab on Data Science
         </h2>
         <h1 class="text-6xl tracking-wide mx-auto font-black">
           Seminars
