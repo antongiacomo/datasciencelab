@@ -40,15 +40,8 @@ function monthName(date) {
           <ArticleCard
             v-for="article in articlesFuture"
             :key="article._path"
-            :path="article._path"
-            :future="true"
-            :title="article.title"
-            :tags="article.tags"
-            :date="article.date"
-            :time="article.time"
-            :author="article.author"
-            :location="article.location"
-            :people="article.people"
+            :article="article"
+
           />
         </div>
         <div class="flex gap-4 items-center my-10 text-blue-800">
@@ -67,16 +60,9 @@ function monthName(date) {
             <div class="flex flex-col divide-y divide-black">
               <Article
                 v-for="article in articlesMonth"
+                :article="article"
                 :key="article._path"
-                :path="article._path"
-                :title="article.title"
-                :tags="article.tags"
-                :date="article.date"
-                :time="article.time"
-                :author="article.author"
-                :location="article.location"
-                :people="article.people"
-                :video_link="article.video_link"
+
               />
             </div>
           </div>

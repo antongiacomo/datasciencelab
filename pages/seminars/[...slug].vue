@@ -155,22 +155,23 @@ useHead({
             <SidebarElement>
               <template #header
                 ><div class="flex items-center gap-1 text-blue-800">
-                  <PaperClipIcon class="h-7 w-7" />Allegati
+                  <PaperClipIcon class="h-7 w-7" />Attachments
                 </div></template
               >
               <template #default>
                 <ul>
                   <li
-                    class="mb-2"
+                    class="my-4"
                     v-for="(a, i) in data.article.resources"
                     :key="i"
                   >
                     <nuxt-link
                       :href="`/resources/${a}`"
                       target="_blank"
+                      class="hover:underline underline-offset-4 "
                       rel="noopener noreferrer"
                     >
-                      {{ a }}
+                      Attachment {{ i + 1 }}
                     </nuxt-link>
                   </li>
                 </ul>

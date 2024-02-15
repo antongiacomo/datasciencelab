@@ -10,6 +10,6 @@ import {
       <slot name="header"></slot>
     </p>
     <slot></slot>
-    <hr class="my-2"/>
+    <!-- <hr class="my-2"/> -->
   </div>
 </template>
