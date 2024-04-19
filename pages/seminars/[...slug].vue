@@ -27,6 +27,7 @@ const targetIsVisible = useElementVisibility(target);
 const { data, error } = await useAsyncData(`${path}`, async () => {
   let article = await queryContent().where({ _path: path }).findOne();
 
+
   return {
     article,
   };
@@ -152,7 +153,7 @@ useHead({
             </ContentRenderer>
           </article>
           <div class="mt-20 mx-auto">
-            <SidebarElement>
+            <SidebarElement v-if="!data.article.resources">
               <template #header
                 ><div class="flex items-center gap-1 text-blue-800">
                   <PaperClipIcon class="h-7 w-7" />Attachments
@@ -180,7 +181,7 @@ useHead({
             <SidebarElement>
               <template #header
                 ><div class="flex items-center gap-2 text-blue-800">
-                  <AcademicCapIcon class="w-7 h-7"></AcademicCapIcon>Relatori
+                  <AcademicCapIcon class="w-7 h-7"></AcademicCapIcon>Speakers
                 </div></template
               >
               <template #default>
