@@ -1,9 +1,9 @@
 ---
-title: 'Research infrastracture as bridge between industry and research'
+title: 'Research infrastructure as bridge between industry and research'
 description: ''
 type: Industry # other types: young, academy
 
-alt: "Research infrastracture as bridge between industry and research"
+alt: "Research infrastructure as bridge between industry and research"
 
 # potrebbe essere logo lab se l'immagine non carica?
 imgurl: https://musascarl.it/wp-content/uploads/2023/08/Tavola-disegno-4.png
