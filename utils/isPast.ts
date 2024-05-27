@@ -1,4 +1,4 @@
 import moment from "moment";
 export default function (date) {
-  return moment(date, "MM-DD-YYYY").toDate() < moment().toDate();
+  return moment(date, "DD-MM-YYYY").toDate() < moment().toDate();
 }

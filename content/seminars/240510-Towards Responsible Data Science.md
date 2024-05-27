@@ -10,7 +10,7 @@ imgurl: https://musascarl.it/wp-content/uploads/2023/08/Tavola-disegno-4.png
 tags: []
 date: 10-05-2024
 time: 10:00
-video_link: 
+video_link: https://youtu.be/Vl9FuhcKdW8
 resources: []
 people:
     - name: Francesca Pratesi

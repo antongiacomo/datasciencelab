@@ -18,7 +18,8 @@ export function useArticles() {
   const fetchArticles = async () => {
     state.value.loading = true;
     const { data, error } = await useAsyncData(() => {
-      return queryContent("seminars").sort({ createdAt: 1 }).find();
+
+      return queryContent("seminars").sort({ createdAt: 1}).find();
     });
     // todo: error handling
     state.value.data = data.value ?? [];
@@ -37,7 +38,7 @@ export function useArticles() {
     return useGroupBy(
       articles.value.filter((article) => isPast(article.date)),
       "date"
-    );
+    )
   });
 
   const articlesFuture = computed(() => {
