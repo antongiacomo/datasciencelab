@@ -18,8 +18,7 @@ export function useArticles() {
   const fetchArticles = async () => {
     state.value.loading = true;
     const { data, error } = await useAsyncData(() => {
-
-      return queryContent("seminars").sort({ createdAt: 1}).find();
+      return queryContent("seminars").sort({ createdAt: 1 }).find();
     });
     // todo: error handling
     state.value.data = data.value ?? [];
@@ -30,15 +29,20 @@ export function useArticles() {
       return state.value.data ?? [];
     }
     return state.value.data.filter((article: any) => {
-      return article.title.toLowerCase().includes(state.value.search.toLowerCase());
+      return article.title
+        .toLowerCase()
+        .includes(state.value.search.toLowerCase());
     });
   });
 
   const articlesPast = computed(() => {
+    const pastArticles = articles.value.filter((article) =>
+      isPast(article.date)
+    );
     return useGroupBy(
-      articles.value.filter((article) => isPast(article.date)),
+      pastArticles.sort((a, b) => new Date(b.date) - new Date(a.date)),
       "date"
-    )
+    );
   });
 
   const articlesFuture = computed(() => {
