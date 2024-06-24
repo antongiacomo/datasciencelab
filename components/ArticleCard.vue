@@ -19,6 +19,7 @@ defineProps<{
         <div class="flex gap-2 text-lg text-gray-500 font-medium">
           <div>{{ article.people.map((person) => person.name).join(", ") }}</div>
         </div>
+
         <div class="flex my-4 gap-6 uppercase s">
           <div class="flex items-center gap-1 font-medium">
             <CalendarIcon class="h-6 w-6 stroke-2" />
