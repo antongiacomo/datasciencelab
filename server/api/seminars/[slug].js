@@ -19,7 +19,8 @@ Time:  ${doc.time} CET
 Website: https://seminars.sesar.di.unimi.it/
 
 Title: ${convertAscii(doc.title)}
-Speakers: ${convertAscii(doc.people[0].name)} (${convertAscii(doc.people[0].affiliation)})
+
+Speakers: ${doc.people.map(a => convertAscii(a.name) +" (" + convertAscii(a.affiliation) + ")").join(", ")}
 
 Abstract: ${doc.body.children[1].children[0].value ?? ''}
 
