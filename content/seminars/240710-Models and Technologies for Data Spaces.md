@@ -24,7 +24,7 @@ people:
       homepage: https://www.unisalento.it/scheda-utente/-/people/antonella.longo
 
 
-location: Online
+location: https://teams.microsoft.com/l/meetup-join/19%3aS2RBj6wmgm2Zjk3jx07ydAsihsKI8KSIkkQRSStaP7E1%40thread.tacv2/1719413391068?context=%7b%22Tid%22%3a%2213b55eef-7018-4674-a3d7-cc0db06d545c%22%2c%22Oid%22%3a%223b92e2cc-3616-4070-82ad-a9f97e1e92ac%22%7d
 ---
 
 ### Abstract
