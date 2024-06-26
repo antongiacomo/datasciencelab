@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   event.res.setHeader('content-type', 'text/plain')
 
   const response = `
-  The CINI National Lab on Data Science is pleased to announce the second seminar in the series Tales on Data Science and Big Data.
+  The CINI National Lab on Data Science is pleased to announce the third seminar in the series Tales on Data Science and Big Data.
 
 *******************************************
 
