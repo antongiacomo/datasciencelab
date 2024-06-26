@@ -27,6 +27,7 @@ Abstract: ${doc.body.children[1].children[0].value ?? ''}
 Track: Academic
 
 Link: ${doc.location}
+
 *******************************************
 
 The seminars Tales on Data Science and Big Data present and discuss the most recent challenges, emerging trends, and theoretical and practical research and development in the field of Data Science and Big Data. Seminars will cover basic and applied research, as well as industrial activities, pertaining to data, from data governance to data processing and analysis. Seminars will also cover research and development in related domains where data and data science technologies are key, such as distributed systems and architectures, cloud-edge continuum, high-performance computing, blockchain, statistics, security and privacy, assurance and certification.
