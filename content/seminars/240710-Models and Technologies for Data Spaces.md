@@ -9,7 +9,7 @@ imgurl: https://musascarl.it/wp-content/uploads/2023/08/Tavola-disegno-4.png
 tags: []
 date: 10-07-2024
 time: 11:00
-video_link:
+video_link: https://youtu.be/xIuAXJNHj_A
 resources: []
 people:
     - name: Marco Zappatore
