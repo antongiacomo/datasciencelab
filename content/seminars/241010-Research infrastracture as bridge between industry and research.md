@@ -10,7 +10,7 @@ imgurl: https://musascarl.it/wp-content/uploads/2023/08/Tavola-disegno-4.png
 tags: []
 date: 10-10-2024
 time: 11:00
-video_link: 
+video_link: https://youtu.be/5PNdVFTZgyo
 resources: []
 people:
     - name: Roberto Trasarti
@@ -24,4 +24,4 @@ location: https://teams.microsoft.com/l/meetup-join/19%3aS2RBj6wmgm2Zjk3jx07ydAs
 
 ### Abstract
 
-The seminar will describe the current European panorama of Research Infrastructure and Open Science in Social Mining. It will describe the new regulamentations such as the governance and AI act and the future of research in Europe. In particular it will present the SoBigData RI ([www.sobigdata.eu](www.sobigdata.eu)) and the policies and tools developed to implement FAIR (findable, accessible, Interoperable, responsible) and FACT (Fair, Accountable, Confidential and Transparent) principles. SoBigData renders social mining experiments more efficiently designed, and repeatable by leveraging concrete tools that operationalize ethics, incorporating values and norms for privacy, fairness, transparency and pluralism; also touching upon how data science helps us to make more informed choices, underlining the need to achieve collective intelligence without compromising the rights of individuals. Examples of usage and innovative research in the fields of mobility data analysis, misinformation, opinion dynamics and health will be presented.
+The seminar will describe the current European panorama of Research Infrastructure and Open Science in Social Mining. It will describe the new regulamentations such as the governance and AI act and the future of research in Europe. In particular it will present the SoBigData RI ([www.sobigdata.eu](http://www.sobigdata.eu)) and the policies and tools developed to implement FAIR (findable, accessible, Interoperable, responsible) and FACT (Fair, Accountable, Confidential and Transparent) principles. SoBigData renders social mining experiments more efficiently designed, and repeatable by leveraging concrete tools that operationalize ethics, incorporating values and norms for privacy, fairness, transparency and pluralism; also touching upon how data science helps us to make more informed choices, underlining the need to achieve collective intelligence without compromising the rights of individuals. Examples of usage and innovative research in the fields of mobility data analysis, misinformation, opinion dynamics and health will be presented.
