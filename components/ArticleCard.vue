@@ -32,7 +32,7 @@ defineProps<{
             <span class="text-left font-medium"> {{article.time }}</span>
           </div>
         </div>
-        <Pill v-if="article.location.includes('http')" color="blue" :icon="LinkIcon">JOIN</Pill>
+        <Pill v-if="article.location && article.location.includes('http')" color="blue" :icon="LinkIcon">JOIN</Pill>
 
         <span v-else>{{ article.location }}</span>
 

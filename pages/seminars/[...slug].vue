@@ -113,7 +113,7 @@ useHead({
             class="flex items-center gap-1"
           >
             <nuxt-link
-              v-if="data.article.location.includes('http')"
+              v-if="data.article.location && data.article.location.includes('http')"
               :href="data.article.location"
               target="_blank"
               rel="noopener noreferrer"
