@@ -5,6 +5,7 @@ export default defineNuxtConfig({
       baseURL: 'https://localhost:3000/datasciencelab',
     }
   },
+
   devtools: {
     enabled: false,
     timeline: {
@@ -12,6 +13,7 @@ export default defineNuxtConfig({
 
     },
   },
+
   nitro: {
 
     prerender: {
@@ -32,4 +34,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/image"
   ],
+
+  compatibilityDate: "2024-11-02",
 });
