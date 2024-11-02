@@ -19,7 +19,7 @@ people:
       homepage: 'https://kdd.isti.cnr.it/people/trasarti-roberto'
 
 
-location:
+location: Online
 ---
 
 ### Abstract
