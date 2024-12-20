@@ -10,7 +10,7 @@ alt: "Multimedia Recommender Systems: Approaches and Challenges"
 tags: []
 date: 18-12-2024
 time: 10:00
-video_link:
+video_link: https://youtu.be/biBp28HuBaw
 resources: []
 people:
     - name: Vincenzo Moscato
