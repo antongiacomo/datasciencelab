@@ -40,7 +40,7 @@ export function useArticles() {
       isPast(article.date)
     );
     return useGroupBy(
-      pastArticles.sort((a, b) => new Date(b.date) - new Date(a.date)),
+      pastArticles.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse(),
       "date"
     );
   });

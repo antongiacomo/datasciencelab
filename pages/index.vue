@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import moment from "moment";
+import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
 import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
 import ArticleCard from "~/components/ArticleCard.vue";
 import Article from "~/components/Article.vue";
@@ -8,7 +9,7 @@ const { fetchArticles, articlesFuture, articlesPast, search } = useArticles();
 await fetchArticles();
 
 function monthName(date) {
-  return moment(date, "DD-MM-YYYY").format("MMMM YYYY");
+  return dayjs(date, "DD-MM-YYYY").format("MMMM YYYY");
 }
 </script>
 
