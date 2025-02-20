@@ -37,7 +37,7 @@ export function useArticles() {
 
   const articlesPast = computed(() => {
     const pastArticles = articles.value.filter((article) =>
-      isPast(article.date)
+      isPast(article)
     );
     return useGroupBy(
       pastArticles.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse(),
@@ -46,7 +46,7 @@ export function useArticles() {
   });
 
   const articlesFuture = computed(() => {
-    return articles.value.filter((article) => !isPast(article.date));
+    return articles.value.filter((article) => !isPast(article));
   });
 
   return {

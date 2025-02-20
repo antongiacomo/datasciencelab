@@ -96,13 +96,13 @@ useHead({
             {{ convertDate(data.article.date) }}</span
           >
         </div>
-        <div v-if="!isPast(data.article.date)" class="flex items-center gap-1">
+        <div v-if="!isPast(data.article)" class="flex items-center gap-1">
           <ClockIcon class="h-6 w-6 stroke-2" />
           <span class="text-xl text-left font-medium" style="">
             {{ data.article.time }}</span
           >
         </div>
-        <div v-if="!isPast(data.article.date)" class="flex items-center gap-1">
+        <div v-if="!isPast(data.article)" class="flex items-center gap-1">
           <nuxt-link
             v-if="
               data.article.location && data.article.location.includes('http')

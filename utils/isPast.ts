@@ -1,4 +1,5 @@
 import moment from "moment"; 
-export default function (date) {
-  return moment(date, "DD-MM-YYYY").toDate() < moment().toDate();
+export default function (article) {
+
+  return moment(`${article.time} ${article.date}`, "HH:mm DD-MM-YYYY").isBefore(moment().subtract(1,'h')) ;
 }

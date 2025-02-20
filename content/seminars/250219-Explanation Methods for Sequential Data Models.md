@@ -6,7 +6,7 @@ type: Young
 tags: []
 date: 19-02-2025
 time: 11:00
-video_link:
+video_link: "https://youtu.be/yBTqBotMwoY"
 resources: []
 people:
     -   name: Francesco Spinnato

@@ -38,9 +38,9 @@ function monthName(date) {
         />
       </div>
     </div>
-    <div></div>
+
     <section>
-      <div class="w-full pt-8 max-w-5xl my-4 mx-auto gap-8">
+      <div class="w-full pt-8 max-w-5xl my-4 mx-auto lg:px-0 px-4 gap-8">
         <div class="flex gap-4 items-center mb-10 text-blue-800">
           <CalendarIcon class="h-8 w-8 stroke-2" />
           <h1 class="text-3xl flex font-black">Upcoming</h1>
