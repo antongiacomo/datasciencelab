@@ -1,16 +1,16 @@
 import { serverQueryContent } from '#content/server'
-
+import ordinal from 'ordinal'
 export default defineEventHandler(async (event) => {
 
   const path = "/seminars/" + getRouterParam(event, 'slug')
-  console.log('path', path)
   const doc = await serverQueryContent(event).where({ _path: path }).findOne();
-  console.log('doc', doc)
-  const feedString = ''
-  event.res.setHeader('content-type', 'text/plain')
+  const all = await serverQueryContent(event).find();
+  const incremental_id = all.findIndex(a => a._path === path) + 1
+
+  event.node.res.setHeader('content-type', 'text/plain')
 
   const response = `
-  The CINI National Lab on Data Science is pleased to announce the third seminar in the series Tales on Data Science and Big Data.
+  The CINI National Lab on Data Science is pleased to announce the ${ordinal(incremental_id)} seminar in the series Tales on Data Science and Big Data.
 
 *******************************************
 
@@ -24,7 +24,7 @@ Speakers: ${doc.people.map(a => convertAscii(a.name) +" (" + convertAscii(a.affi
 
 Abstract: ${doc.body.children[1].children[0].value ?? ''}
 
-Track: Academic
+Track: ${doc.type}
 
 Link: ${doc.location}
 
