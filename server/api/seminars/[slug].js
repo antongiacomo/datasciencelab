@@ -36,5 +36,5 @@ The seminars are structured in three main tracks: academic, featuring renowned I
 
 The research seminars target the Italian and international research community at all levels, from PhD students to professors and researchers in both academia, industry, and public administration. Seminars are held in English, virtually, tentatively on a two-month basis.
   `
-  event.res.end(response.trim())
+  event.node.res.end(response.trim())
 })
