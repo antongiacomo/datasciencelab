@@ -16,7 +16,7 @@ defineProps<{
           </div>
           <div class="flex gap-2 text-lg text-gray-500 font-medium">
             <div>
-              {{ article?.people.map((person) => person.name).join(", ") }}
+              {{article?.people.map((person) => person.name).join(", ")}}
             </div>
           </div>
           <div class="flex flex-wrap mt-4 gap-6 uppercase">
@@ -26,12 +26,8 @@ defineProps<{
                 {{ convertDate(article && article.date) }}
               </span>
             </div>
-            <Pill v-if="article.video_link" color="green" :icon="CheckIcon"
-              >VIDEO AVAILABLE</Pill
-            >
-            <Pill v-else color="red" :icon="XMarkIcon"
-              >VIDEO NOT AVAILABLE</Pill
-            >
+            <Pill v-if="article.video_link" color="green" :icon="CheckIcon">VIDEO AVAILABLE</Pill>
+            <Pill v-else color="red" :icon="XMarkIcon">VIDEO NOT AVAILABLE</Pill>
           </div>
         </div>
       </div>
