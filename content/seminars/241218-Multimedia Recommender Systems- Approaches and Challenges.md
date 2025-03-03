@@ -11,7 +11,7 @@ tags: []
 date: 18-12-2024
 time: 10:00
 video_link: https://youtu.be/biBp28HuBaw
-resources: ["keynote_speech_MOSCATO.pdf"]
+resources: ["241218-Multimedia Recommender Systems- Approaches and Challenges.pdf"]
 people:
     - name: Vincenzo Moscato
       affiliation: Dipartimento di Ingegneria Elettrica e delle Tecnologie dell'Informazione - Università degli Studi di Napoli "Federico II"

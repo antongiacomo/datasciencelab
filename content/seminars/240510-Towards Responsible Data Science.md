@@ -11,7 +11,7 @@ tags: []
 date: 10-05-2024
 time: 10:00
 video_link: https://youtu.be/Vl9FuhcKdW8
-resources: []
+resources: ['240510-Towards Responsible Data Science.pdf']
 people:
     - name: Francesca Pratesi
       affiliation: Istituto di Scienza e Tecnologie dell'Informazione, Consiglio Nazionale delle Ricerche (ISTI - CNR)

@@ -7,7 +7,7 @@ tags: []
 date: 19-02-2025
 time: 11:00
 video_link: "https://youtu.be/yBTqBotMwoY"
-resources: []
+resources: ["250219-Explanation Methods for Sequential Data Models.pdf"]
 people:
     -   name: Francesco Spinnato
         affiliation: Università di Pisa

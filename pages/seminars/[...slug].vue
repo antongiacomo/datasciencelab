@@ -146,7 +146,7 @@ useHead({
           </ContentRenderer>
         </article>
         <div class="mt-20 mx-auto">
-          <SidebarElement v-if="!data.article.resources">
+          <SidebarElement v-if="data.article.resources.length > 0">
             <template #header
               ><div class="flex items-center gap-1 text-blue-800">
                 <PaperClipIcon class="h-7 w-7" />Attachments

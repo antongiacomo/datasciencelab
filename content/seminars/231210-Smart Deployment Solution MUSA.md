@@ -11,7 +11,7 @@ tags: ["pnrr", "edge-cloud", "distributed systems"]
 date: 10-12-2023
 time: 11:00
 video_link: https://youtu.be/o_OstveK00E
-resources: ["Smart_Deployment_Solution_for_PNRR_MUSA-Anisetti-Ardagna.pdf"]
+resources: ["231210-Smart Deployment Solution MUSA.pdf"]
 people:
     - name: Claudio A. Ardagna
       affiliation: Università degli Studi di Milano
