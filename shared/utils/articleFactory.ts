@@ -1,6 +1,6 @@
 import type { PagesCollectionItem } from "@nuxt/content";
 import dayjs from "dayjs";
-import customParseFormat from 'dayjs/plugin/customParseFormat'
+import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat);
 
 export default function (item : PagesCollectionItem) {
