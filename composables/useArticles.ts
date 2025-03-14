@@ -17,8 +17,9 @@ export function useArticles() {
 
   const fetchArticles = async () => {
     state.value.loading = true;
-    const { data, error } = await useAsyncData(() => {
-      return queryContent("seminars").sort({ createdAt: 1 }).find();
+    const { data, error } = await useAsyncData(async () => {
+      let articles = await queryCollection('pages').all()
+      return articles.sort();
     });
     // todo: error handling
     state.value.data = data.value ?? [];
@@ -40,10 +41,10 @@ export function useArticles() {
       isPast(article)
     );
     return useGroupBy(
-      pastArticles.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse(),
+      pastArticles.sort((a, b) => new Date(a.meta.date) - new Date(b.meta.date)).reverse(),
       "date"
     );
-  });
+  });  
 
   const articlesFuture = computed(() => {
     return articles.value.filter((article) => !isPast(article));

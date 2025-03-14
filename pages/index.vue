@@ -34,7 +34,7 @@ function monthName(date) {
           type="text"
           placeholder="Filter Articles"
           v-model="search"
-          class="w-full mt-4 p-4 rounded"
+          class="w-full mt-4 p-4 bg-white rounded"
         />
       </div>
     </div>
@@ -48,7 +48,7 @@ function monthName(date) {
         <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
           <ArticleCard
             v-for="article in articlesFuture"
-            :key="article._path"
+            :key="article.path"
             :article="article"
           />
         </div>
@@ -70,7 +70,7 @@ function monthName(date) {
               <Article
                 v-for="article in articlesMonth"
                 :article="article"
-                :key="article._path"
+                :key="article.path"
               />
             </div>
           </div>

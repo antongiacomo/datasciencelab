@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
@@ -12,6 +13,12 @@ export default defineNuxtConfig({
       enabled: true,
 
     },
+  },
+  css: ['~/assets/css/main.css'],
+  vite:{
+    plugins: [
+      tailwindcss()
+    ]
   },
 
   nitro: {
@@ -28,7 +35,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    "@nuxtjs/tailwindcss",
+    // "@nuxtjs/tailwindcss",
     "@nuxt/content",
     "nuxt-lodash",
     "@vueuse/nuxt",

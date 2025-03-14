@@ -25,7 +25,8 @@ const target = ref(null);
 const targetIsVisible = useElementVisibility(target);
 
 const { data, error } = await useAsyncData(`${path}`, async () => {
-  let article = await queryContent().where({ _path: path }).findOne();
+  let article = await queryCollection('pages').path(path).first();
+
   return {
     article,
   };
@@ -50,6 +51,7 @@ useHead({
 });
 </script>
 <template>
+
   <div class="w-full bg-blue-100 sticky top-0 z-10">
     <div class="max-w-5xl m-auto flex gap-8 items-center py-4">
       <div class="flex gap-x-1">
@@ -74,7 +76,7 @@ useHead({
       <div class="mt-2 flex gap-2 text-xl text-gray-500 font-medium">
         <div>
           <nuxt-link
-            v-for="(person, key) in data.article.people"
+            v-for="(person, key) in data.article.meta.people"
             :href="`#${person.name}`"
           >
             <span v-if="key != 0">,</span> {{ person.name }}
@@ -93,32 +95,32 @@ useHead({
           <CalendarIcon class="h-6 w-6 stroke-2" />
 
           <span class="text-xl text-left font-medium uppercase" style="">
-            {{ convertDate(data.article.date) }}</span
+            {{ convertDate(data.article.meta.date) }}</span
           >
         </div>
         <div v-if="!isPast(data.article)" class="flex items-center gap-1">
           <ClockIcon class="h-6 w-6 stroke-2" />
           <span class="text-xl text-left font-medium" style="">
-            {{ data.article.time }}</span
+            {{ data.article.meta.time }}</span
           >
         </div>
         <div v-if="!isPast(data.article)" class="flex items-center gap-1">
           <nuxt-link
             v-if="
-              data.article.location && data.article.location.includes('http')
+              data.article.meta.location && data.article.meta.location.includes('http')
             "
-            :href="data.article.location"
+            :href="data.article.meta.location"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Pill color="blue" :icon="LinkIcon">JOIN</Pill>
           </nuxt-link>
 
-          <span v-else>{{ data.article.location }}</span>
+          <span v-else>{{ data.article.meta.location }}</span>
         </div>
-        <div v-if="data.article.video_link">
+        <div v-if="data.article.meta.video_link">
           <nuxt-link
-            :href="data.article.video_link"
+            :href="data.article.meta.video_link"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -146,7 +148,7 @@ useHead({
           </ContentRenderer>
         </article>
         <div class="mt-20 mx-auto">
-          <SidebarElement v-if="data.article.resources.length > 0">
+          <SidebarElement v-if="data.article.meta.resources.length > 0">
             <template #header
               ><div class="flex items-center gap-1 text-blue-800">
                 <PaperClipIcon class="h-7 w-7" />Attachments
@@ -156,7 +158,7 @@ useHead({
               <ul>
                 <li
                   class="my-4"
-                  v-for="(a, i) in data.article.resources"
+                  v-for="(a, i) in data.article.meta.resources"
                   :key="i"
                 >
                   <nuxt-link
@@ -179,7 +181,7 @@ useHead({
             >
             <template #default>
               <ul>
-                <li class="mb-4" v-for="(p, i) in data.article.people" :key="i">
+                <li class="mb-4" v-for="(p, i) in data.article.meta.people" :key="i">
                   <Bio :person="p"></Bio>
                 </li>
               </ul>

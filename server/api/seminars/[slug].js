@@ -1,9 +1,9 @@
-import { serverQueryContent } from '#content/server'
+// import { serverQueryContent } from '#content/server'
 import ordinal from 'ordinal'
 export default defineEventHandler(async (event) => {
 
   const path = "/seminars/" + getRouterParam(event, 'slug')
-  const doc = await serverQueryContent(event).where({ _path: path }).findOne();
+  const doc = await queryCollection('pages').path(route.path).first()
   const all = await serverQueryContent(event).find();
   const incremental_id = all.findIndex(a => a._path === path) + 1
 
