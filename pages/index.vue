@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import moment from "moment"; 
 import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
 import ArticleCard from "~/components/ArticleCard.vue";
 import Article from "~/components/Article.vue";
 
 const { fetchArticles, articlesFuture, articlesPast, search } = useArticles();
-await fetchArticles();
 
-function monthName(date) {
-  return moment(date, "DD-MM-YYYY").format("MMMM YYYY");
-}
+const articles = fetchArticles();
+
+console.log(articles);
 </script>
 
 <template>
@@ -17,25 +15,14 @@ function monthName(date) {
     <div class="pt-8 px-4 pb-4 bg-blue-100">
       <div class="max-w-5xl mx-auto">
         <div class="mb-10 flex items-center space-x-4">
-          <img
-            src="/logo.svg"
-            alt="CINI Lab on Data Science"
-            class="h-16 w-16"
-          />
-          <h2
-            class="text-2xl font-medium hover:underline transition-all duration-300 cursor-pointer"
-          >
+          <img src="/logo.svg" alt="CINI Lab on Data Science" class="h-16 w-16" />
+          <h2 class="text-2xl font-medium hover:underline transition-all duration-300 cursor-pointer">
             CINI Lab on Data Science
           </h2>
         </div>
         <h1 class="text-6xl tracking-wide mx-auto font-black">Seminars</h1>
         <p class="text-2xl mt-1 mb-2">Tales on Data Science and Big Data</p>
-        <input
-          type="text"
-          placeholder="Filter Articles"
-          v-model="search"
-          class="w-full mt-4 p-4 rounded"
-        />
+        <input type="text" placeholder="Filter Articles" v-model="search" class="w-full mt-4 p-4 bg-white rounded" />
       </div>
     </div>
 
@@ -46,32 +33,22 @@ function monthName(date) {
           <h1 class="text-3xl flex font-black">Upcoming</h1>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
-          <ArticleCard
-            v-for="article in articlesFuture"
-            :key="article._path"
-            :article="article"
-          />
+          <ArticleCard v-for="article in articlesFuture" :key="article.path" :article="article" />
         </div>
         <div class="flex gap-4 items-center my-10 text-blue-800">
           <ClockIcon class="h-8 w-8 stroke-2" />
           <h1 class="text-3xl font-black">Past</h1>
         </div>
         <div class="">
+          <div class="flex flex-col divide-y divide-black">
+            <div class="" v-for="articlesMonth in articlesPast" :key="date">
 
-          <div
-            class=""
-            v-for="(articlesMonth, date) in articlesPast"
-            :key="date"
-          >
-            <h1 class="text-xl font-extrabold mt-6 mb-2">
-              {{ monthName(date) }}
-            </h1>
-            <div class="flex flex-col divide-y divide-black">
-              <Article
-                v-for="article in articlesMonth"
-                :article="article"
-                :key="article._path"
-              />
+              <h1 class="text-xl font-extrabold mt-6 mb-2">
+
+                {{ articlesMonth.monthName }}
+              </h1>
+
+              <Article v-for="article in articlesMonth.articles" :article="article" :key="article.path" />
             </div>
           </div>
         </div>
