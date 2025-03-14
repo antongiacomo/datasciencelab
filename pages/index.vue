@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import moment from "moment";
 import { ClockIcon, CalendarIcon } from "@heroicons/vue/24/outline";
 import ArticleCard from "~/components/ArticleCard.vue";
 import Article from "~/components/Article.vue";
