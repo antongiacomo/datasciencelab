@@ -5,11 +5,10 @@ import ArticleCard from "~/components/ArticleCard.vue";
 import Article from "~/components/Article.vue";
 
 const { fetchArticles, articlesFuture, articlesPast, search } = useArticles();
-await fetchArticles();
 
-function monthName(date) {
-  return moment(date, "DD-MM-YYYY").format("MMMM YYYY");
-}
+const articles = fetchArticles();
+
+console.log(articles);
 </script>
 
 <template>
@@ -43,14 +42,14 @@ function monthName(date) {
         </div>
         <div class="">
           <div class="flex flex-col divide-y divide-black">
-            <div class="" v-for="(articlesMonth, date) in articlesPast" :key="date">
+            <div class="" v-for="articlesMonth in articlesPast" :key="date">
 
               <h1 class="text-xl font-extrabold mt-6 mb-2">
 
-                {{ monthName(date) }}
+                {{ articlesMonth.monthName }}
               </h1>
 
-              <Article v-for="article in articlesMonth" :article="article" :key="article.path" />
+              <Article v-for="article in articlesMonth.articles" :article="article" :key="article.path" />
             </div>
           </div>
         </div>

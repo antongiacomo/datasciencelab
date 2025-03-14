@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ClockIcon, CalendarIcon, LinkIcon } from "@heroicons/vue/24/outline";
-defineProps<{
-  article: Article
-}>();
+
+defineProps<{ article: Article }>();
 </script>
 
 <template>
@@ -28,7 +27,7 @@ defineProps<{
             <CalendarIcon class="h-6 w-6 stroke-2" />
 
             <span class="text-left font-medium">
-              {{ convertDate(article.meta.date) }}</span>
+              {{ article.dateFormatted }}</span>
           </div>
           <div class="flex items-center gap-1">
             <ClockIcon class="h-6 w-6 stroke-2" />

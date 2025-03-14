@@ -1,5 +1,6 @@
 import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
-
+import moment from "moment";
+import articleFactory from "~/shared/utils/articleFactory";
 interface UseArticles {
   search: string;
   data: ParsedContent[];
@@ -17,41 +18,53 @@ export function useArticles() {
 
   const fetchArticles = async () => {
     state.value.loading = true;
+
     const { data, error } = await useAsyncData(async () => {
       let articles = await queryCollection('pages').all()
       return articles.sort();
     });
+
     // todo: error handling
+    if (error.value) {
+      state.value.error = error.value;
+      state.value.loading = false;
+      state.value.data = [];
+      return;
+    }
+
     state.value.data = data.value ?? [];
   };
 
   const articles = computed<ParsedContent[]>(() => {
-    if (!state.value.search || !state.value.data) {
-      return state.value.data ?? [];
+    if (!state.value.data) {
+      return [];
     }
+
     return state.value.data.filter((article: any) => {
       return article.title
         .toLowerCase()
         .includes(state.value.search.toLowerCase());
-    });
+    }).map((article) => articleFactory(article));
   });
 
   const articlesPast = computed(() => {
-    const pastArticles = articles.value.filter((article) =>
-      isPast(article)
-    );
-    return useGroupBy(
-      pastArticles.sort((a, b) => { 
-        
-        new Date(a.meta.date) - new Date(b.meta.date)
-    })
-      .reverse(),
-      "meta.date"
-    );
+    const articlesPast = articles.value
+      .filter((article) => article.isPast)
+      .sort((a, b) => new Date(a.meta.date).getTime() - new Date(b.meta.date).getTime())
+      .reverse();
+
+    const articlesMonthGrouped = useGroupBy(articlesPast, "date")
+
+    return Object.entries(articlesMonthGrouped).map(([date, articles]) => {
+      return {
+        monthName: moment(date, "DD-MM-YYYY").format("MMMM YYYY"),
+        articles
+      }
+    });
   });
 
   const articlesFuture = computed(() => {
-    return articles.value.filter((article) => !isPast(article));
+    return articles.value.filter((article) => !article.isPast);
   });
 
   return {

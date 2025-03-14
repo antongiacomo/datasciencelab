@@ -1,32 +1,35 @@
-// import { serverQueryContent } from '#content/server'
 import ordinal from 'ordinal'
+import articleFactory from '~/shared/utils/articleFactory';
+
 export default defineEventHandler(async (event) => {
-
   const path = "/seminars/" + getRouterParam(event, 'slug')
-  const doc = await queryCollection('pages').path(route.path).first()
-  const all = await serverQueryContent(event).find();
-  const incremental_id = all.findIndex(a => a._path === path) + 1
 
-  event.node.res.setHeader('content-type', 'text/plain')
+  const doc = articleFactory(
+    await queryCollection(event,"pages").path(path).first()
+  );
+  const all = await queryCollection(event,"pages").all();
+  const incremental_id = all.findIndex(a => a.path === path) + 1;
+
+  event.node.res.setHeader('content-type', 'text/plain');
 
   const response = `
   The CINI National Lab on Data Science is pleased to announce the ${ordinal(incremental_id)} seminar in the series Tales on Data Science and Big Data.
 
 *******************************************
 
-Date: ${convertDate(doc.date)}
-Time:  ${doc.time} CET
+Date: ${doc.dateFormatted}
+Time:  ${doc.meta.time} CET
 Website: https://seminars.sesar.di.unimi.it/
 
 Title: ${convertAscii(doc.title)}
 
-Speakers: ${doc.people.map(a => convertAscii(a.name) +" (" + convertAscii(a.affiliation) + ")").join(", ")}
+Speakers: ${doc.meta.people.map(a => convertAscii(a.name) + " (" + convertAscii(a.affiliation) + ")").join(", ")}
 
-Abstract: ${doc.body.children[1].children[0].value ?? ''}
+Abstract: ${doc.body.value[1][2] ?? ''}
 
-Track: ${doc.type}
+Track: ${doc.meta.type}
 
-Link: ${doc.location}
+Link: ${doc.meta.location}
 
 *******************************************
 
@@ -37,4 +40,5 @@ The seminars are structured in three main tracks: academic, featuring renowned I
 The research seminars target the Italian and international research community at all levels, from PhD students to professors and researchers in both academia, industry, and public administration. Seminars are held in English, virtually, tentatively on a two-month basis.
   `
   event.node.res.end(response.trim())
+  
 })
