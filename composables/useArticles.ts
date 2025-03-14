@@ -1,6 +1,8 @@
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
-import moment from "moment";
+import type { ParsedContent } from "@nuxt/content/dist/runtime/types"
+import dayjs from "dayjs";
+
 import articleFactory from "~/shared/utils/articleFactory";
+
 interface UseArticles {
   search: string;
   data: ParsedContent[];
@@ -57,7 +59,7 @@ export function useArticles() {
 
     return Object.entries(articlesMonthGrouped).map(([date, articles]) => {
       return {
-        monthName: moment(date, "DD-MM-YYYY").format("MMMM YYYY"),
+        monthName: dayjs(date, "DD-MM-YYYY").format("MMMM YYYY"),
         articles
       }
     });

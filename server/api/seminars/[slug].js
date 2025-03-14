@@ -8,9 +8,9 @@ export default defineEventHandler(async (event) => {
     await queryCollection(event,"pages").path(path).first()
   );
   const all = await queryCollection(event,"pages").all();
-  const incremental_id = all.findIndex(a => a.path === path) + 1;
+  const incremental_id = all.findIndex(a => a.path === path) + 1
 
-  event.node.res.setHeader('content-type', 'text/plain');
+  event.node.res.setHeader('content-type', 'text/plain')
 
   const response = `
   The CINI National Lab on Data Science is pleased to announce the ${ordinal(incremental_id)} seminar in the series Tales on Data Science and Big Data.
