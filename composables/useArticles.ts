@@ -41,10 +41,14 @@ export function useArticles() {
       isPast(article)
     );
     return useGroupBy(
-      pastArticles.sort((a, b) => new Date(a.meta.date) - new Date(b.meta.date)).reverse(),
-      "date"
+      pastArticles.sort((a, b) => { 
+        
+        new Date(a.meta.date) - new Date(b.meta.date)
+    })
+      .reverse(),
+      "meta.date"
     );
-  });  
+  });
 
   const articlesFuture = computed(() => {
     return articles.value.filter((article) => !isPast(article));
