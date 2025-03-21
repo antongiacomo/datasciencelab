@@ -42,11 +42,6 @@ useHead({
   ],
 });
 
-
-
-
-
-
 const { cmd_k } = useMagicKeys({
   passive: false,
   onEventFired(e) {
@@ -110,12 +105,12 @@ whenever(cmd_k, async () => {
         </div>
         <div v-if="!isPast" class="flex items-center gap-10">
           <div class="flex items-center gap-1">
-          <ClockIcon class="h-6 w-6 stroke-2" />
+            <ClockIcon class="h-6 w-6 stroke-2" />
 
-          <span class="text-xl text-left font-medium" style="">
-            {{ meta.time }}
-          </span>
-        </div>
+            <span class="text-xl text-left font-medium" style="">
+              {{ meta.time }}
+            </span>
+          </div>
           <nuxt-link v-if="meta.location && meta.location.includes('http')" :href="meta.location" target="_blank"
             rel="noopener noreferrer">
             <Pill color="blue" :icon="LinkIcon">JOIN</Pill>
