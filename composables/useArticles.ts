@@ -26,7 +26,7 @@ export function useArticles() {
       return articles.sort();
     });
 
-    // todo: error handling
+
     if (error.value) {
       state.value.error = error.value;
       state.value.loading = false;
@@ -45,7 +45,8 @@ export function useArticles() {
     return state.value.data.filter((article: any) => {
       return article.title
         .toLowerCase()
-        .includes(state.value.search.toLowerCase());
+        .includes(state.value.search.toLowerCase())
+      
     }).map((article) => articleFactory(article));
   });
 

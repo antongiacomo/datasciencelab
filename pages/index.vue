@@ -7,7 +7,6 @@ const { fetchArticles, articlesFuture, articlesPast, search } = useArticles();
 
 const articles = fetchArticles();
 
-console.log(articles);
 </script>
 
 <template>
