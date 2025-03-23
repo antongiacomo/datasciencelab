@@ -64,9 +64,9 @@ const articles = fetchArticles();
 
     <section>
       <div class="mx-auto my-4 w-full max-w-5xl gap-8 px-4 pt-8 lg:px-0">
-        <div class="mb-10 flex items-center gap-4 text-blue-800">
+        <div class="mb-10 flex items-center gap-4 text-blue-950">
           <CalendarIcon class="h-8 w-8 stroke-2" />
-          <h1 class="flex text-3xl font-black">Upcoming</h1>
+          <h1 class="flex text-3xl font-bold">Upcoming</h1>
         </div>
         <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
           <ArticleCard
@@ -75,14 +75,14 @@ const articles = fetchArticles();
             :article="article"
           />
         </div>
-        <div class="mt-10 mb-0 flex items-center gap-4 text-blue-800">
+        <div class="mt-10 mb-4 flex items-center gap-4 text-blue-950">
           <ClockIcon class="h-8 w-8 stroke-2" />
-          <h1 class="text-3xl font-black">Past</h1>
+          <h1 class="text-3xl font-bold ">Past</h1>
         </div>
         <div>
           <div class="flex flex-col">
             <div v-for="articlesMonth in articlesPast" :key="date">
-              <h1 class="mt-6 mb-2 text-xl font-extrabold">
+              <h1 class="text-blue-950 mt-6 mb-2 text-xl font-extrabold">
                 {{ articlesMonth.monthName }}
               </h1>
 

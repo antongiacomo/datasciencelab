@@ -97,19 +97,22 @@ whenever(cmd_k, async () => {
 
       <div class="flex flex-wrap mt-8 gap-10">
         <div class="flex items-center gap-1 font-medium">
-          <CalendarIcon class="h-6 w-6 stroke-2" />
+          <IconText :icon="CalendarIcon">
+      
 
           <span class="text-xl text-left font-medium uppercase" style="">
             {{ dateFormatted }}
           </span>
+        </IconText>
         </div>
         <div v-if="!isPast" class="flex items-center gap-10">
           <div class="flex items-center gap-1">
-            <ClockIcon class="h-6 w-6 stroke-2" />
+            <IconText :icon="ClockIcon">
 
             <span class="text-xl text-left font-medium" style="">
               {{ meta.time }}
             </span>
+          </IconText>
           </div>
           <nuxt-link v-if="meta.location && meta.location.includes('http')" :href="meta.location" target="_blank"
             rel="noopener noreferrer">

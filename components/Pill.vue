@@ -14,9 +14,11 @@ const classObj = computed(() => {
 const classObject = reactive({
   'bg-red-200': props.color =="red",
   'border-red-600': props.color == "red",
-
   'text-red-800': props.color == "red",
 
+  'bg-gray-100': props.color =="gray",
+  'border-gray-600': props.color == "gray",
+  'text-gray-800': props.color == "gray",
 
   'bg-green-200': props.color == "green",
   'border-green-600': props.color == "green",
