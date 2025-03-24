@@ -140,7 +140,7 @@ whenever(cmd_k, async () => {
 
       <section class="max-w-5xl mx-auto px-4">
 
-        <div class="col-span-full max-w-prose prose md:prose-lg lg:prose-xl prose-a:no-underline">
+        <div class="col-span-full max-w-prose  prose md:prose-lg lg:prose-xl prose-a:no-underline">
           <ContentRenderer :value="data" />
         </div>
 
@@ -148,7 +148,7 @@ whenever(cmd_k, async () => {
           <SidebarElement v-if="meta.resources.length > 0">
             <template #header>
               <div class="flex items-center gap-1 text-blue-800">
-                <PaperClipIcon class="h-7 w-7" />Attachments
+                <PaperClipIcon class="size-7" />Attachments
               </div>
             </template>
             <template #default>

@@ -36,7 +36,7 @@ const classObject = reactive({
   
     :class=classObject
   >
-    <icon class="h-4 w-4 stroke-2" />
+    <icon class="size-4 stroke-2" />
     <span><slot></slot></span>
   </div>
 </template>

@@ -65,7 +65,7 @@ const articles = fetchArticles();
     <section>
       <div class="mx-auto my-4 w-full max-w-5xl gap-8 px-4 pt-8 lg:px-0">
         <div class="mb-10 flex items-center gap-4 text-blue-950">
-          <CalendarIcon class="h-8 w-8 stroke-2" />
+          <CalendarIcon class="size-8 stroke-2" />
           <h1 class="flex text-3xl font-bold">Upcoming</h1>
         </div>
         <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -76,7 +76,7 @@ const articles = fetchArticles();
           />
         </div>
         <div class="mt-10 mb-4 flex items-center gap-4 text-blue-950">
-          <ClockIcon class="h-8 w-8 stroke-2" />
+          <ClockIcon class="size-8 stroke-2" />
           <h1 class="text-3xl font-bold ">Past</h1>
         </div>
         <div>
