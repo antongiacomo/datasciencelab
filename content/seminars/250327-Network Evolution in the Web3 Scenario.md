@@ -6,7 +6,7 @@ type: Young
 tags: []
 date: 27-03-2025
 time: 11:00
-video_link:
+video_link: https://youtu.be/jIWCYlNefdQ
 resources: ["250509-Efficient Evaluation of Knowledge Graph Quality- Challenges and Opportunities.pdf"]
 people:
     -   name: Alessia Galdeman
