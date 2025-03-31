@@ -7,7 +7,7 @@ tags: []
 date: 27-03-2025
 time: 11:00
 video_link:
-resources: []
+resources: ["250509-Efficient Evaluation of Knowledge Graph Quality- Challenges and Opportunities.pdf"]
 people:
     -   name: Alessia Galdeman
         affiliation: IT University of Copenhagen
