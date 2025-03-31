@@ -1,33 +1,49 @@
 <script setup lang="ts">
 import { CalendarIcon, CheckIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 
-defineProps<{
-  article: Article,
-}>();
-
+const props = defineProps<{ article: Article }>();
 </script>
+
 <template>
-  <nuxt-link class="w-full h-full" :to="article && article._path">
-    <article class="w-full flex items-center justify-start antialiased">
-      <div class="w-full h-full">
-        <div class="w-full h-full rounded-lg bg-white py-4">
-          <div class="my-2 text-xl py-0 font-semibold leading-tight">
+  <nuxt-link class="h-full w-full" :to="article && article.path">
+    <article
+      class="flex w-full items-center justify-start rounded-lg border border-gray-300 hover:border bg-white hover:border-blue-900 hover:bg-blue-50/90 px-4 antialiased"
+    >
+      <div class="h-full w-full">
+        <div class="h-full w-full rounded-lg  py-2">
+          <div
+            class="my-2 py-0 text-xl leading-tight font-semibold text-blue-900"
+          >
             {{ article && article.title }}
           </div>
-          <div class="flex gap-2 text-lg text-gray-500 font-medium">
+          <div class="flex gap-2 text-lg font-medium text-gray-500">
             <div>
-              {{article?.people.map((person) => person.name).join(", ")}}
+              {{
+                article?.meta?.people.map((person) => person.name).join(", ")
+              }}
             </div>
           </div>
-          <div class="flex flex-wrap mt-4 gap-6 uppercase">
+          <div class="mt-4 flex flex-wrap gap-6 uppercase">
             <div class="flex items-center gap-1 font-medium">
-              <CalendarIcon class="h-6 w-6 stroke-2" />
+              <IconText
+
+              :icon="CalendarIcon"
+            >
               <span class="text-left font-medium">
-                {{ convertDate(article && article.date) }}
+                {{ article.dateFormatted }}
               </span>
+              </IconText>
             </div>
-            <Pill v-if="article.video_link" color="green" :icon="CheckIcon">VIDEO AVAILABLE</Pill>
-            <Pill v-else color="red" :icon="XMarkIcon">VIDEO NOT AVAILABLE</Pill>
+
+            <IconText
+              v-if="article.meta.video_link"
+              :icon="CheckIcon"
+            >
+              VIDEO AVAILABLE
+            </IconText>
+            <IconText v-else :icon="XMarkIcon">
+              VIDEO NOT AVAILABLE
+            </IconText>
           </div>
         </div>
       </div>
