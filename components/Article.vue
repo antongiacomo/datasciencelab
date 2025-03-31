@@ -26,7 +26,7 @@ const props = defineProps<{ article: Article }>();
           <div class="mt-4 flex flex-wrap gap-6 uppercase">
             <div class="flex items-center gap-1 font-medium">
               <IconText
-              v-if="article.meta.video_link"
+
               :icon="CalendarIcon"
             >
               <span class="text-left font-medium">
