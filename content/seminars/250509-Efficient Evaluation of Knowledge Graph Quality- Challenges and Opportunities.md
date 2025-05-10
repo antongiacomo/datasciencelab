@@ -6,7 +6,7 @@ type: Young
 tags: []
 date: 09-05-2025
 time: 11:00
-video_link: 
+video_link: https://youtu.be/ZY5bNjqqOyU
 resources: []
 people:
     -   name: Stefano Marchesin
