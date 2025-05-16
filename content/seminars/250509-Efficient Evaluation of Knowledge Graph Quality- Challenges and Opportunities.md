@@ -7,7 +7,7 @@ tags: []
 date: 09-05-2025
 time: 11:00
 video_link: https://youtu.be/ZY5bNjqqOyU
-resources: []
+resources: ["250509-Efficient Evaluation of Knowledge Graph Quality- Challenges and Opportunities.pdf"]
 people:
     -   name: Stefano Marchesin
         affiliation: Università degli Studi di Padova
