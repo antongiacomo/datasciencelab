@@ -82,7 +82,7 @@ whenever(cmd_k, async () => {
       </h1>
       <div class="mt-2 flex gap-2 text-xl text-gray-500 font-medium">
         <div>
-          <nuxt-link v-for="(person, key) in meta.people" :href="`#${person.name}`">
+          <nuxt-link v-for="(person, key) in (meta && meta.people) || []" :href="`#${person.name}`">
             <span v-if="key != 0">,</span> {{ person.name }}
           </nuxt-link>
         </div>
@@ -110,18 +110,18 @@ whenever(cmd_k, async () => {
             <IconText :icon="ClockIcon">
 
             <span class="text-xl text-left font-medium" style="">
-              {{ meta.time }}
+              {{ meta && meta.time }}
             </span>
           </IconText>
           </div>
-          <nuxt-link v-if="meta.location && meta.location.includes('http')" :href="meta.location" target="_blank"
+          <nuxt-link v-if="meta && meta.location && meta.location.includes('http')" :href="meta.location" target="_blank"
             rel="noopener noreferrer">
             <Pill color="blue" :icon="LinkIcon">JOIN</Pill>
           </nuxt-link>
 
-          <span v-else>{{ meta.location }}</span>
+          <span v-else>{{ meta && meta.location }}</span>
         </div>
-        <div v-if="meta.video_link">
+        <div v-if="meta && meta.video_link">
           <nuxt-link :href="meta.video_link" target="_blank" rel="noopener noreferrer">
             <Pill color="green" :icon="LinkIcon">VIDEO</Pill>
           </nuxt-link>
@@ -145,7 +145,7 @@ whenever(cmd_k, async () => {
         </div>
 
         <div class="mt-20 mx-auto">
-          <SidebarElement v-if="meta.resources && meta.resources.length > 0">
+          <SidebarElement v-if="meta && meta.resources && meta.resources.length > 0">
             <template #header>
               <div class="flex items-center gap-1 text-blue-800">
                 <PaperClipIcon class="size-7" />Attachments
@@ -153,7 +153,7 @@ whenever(cmd_k, async () => {
             </template>
             <template #default>
               <ul>
-                <li class="my-4" v-for="(a, i) in meta.resources" :key="i">
+                <li class="my-4" v-for="(a, i) in (meta && meta.resources) || []" :key="i">
                   <nuxt-link :href="`/resources/${a}`" target="_blank" class="hover:underline underline-offset-4"
                     rel="noopener noreferrer">
                     Attachment {{ i + 1 }}
@@ -170,7 +170,7 @@ whenever(cmd_k, async () => {
             </template>
             <template #default>
               <ul>
-                <li class="mb-4" v-for="(p, i) in meta.people" :key="i">
+                <li class="mb-4" v-for="(p, i) in (meta && meta.people) || []" :key="i">
                   <Bio :person="p"></Bio>
                 </li>
               </ul>
