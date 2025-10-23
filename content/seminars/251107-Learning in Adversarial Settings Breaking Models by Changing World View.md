@@ -6,6 +6,7 @@ type: Young
 tags: []
 date: 07-11-2025
 time: 11:00
+
 people:
     -   name: Fabio De Gaspari
         affiliation: Sapienza University of Rome

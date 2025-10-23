@@ -145,7 +145,7 @@ whenever(cmd_k, async () => {
         </div>
 
         <div class="mt-20 mx-auto">
-          <SidebarElement v-if="meta.resources.length > 0">
+          <SidebarElement v-if="meta.resources && meta.resources.length > 0">
             <template #header>
               <div class="flex items-center gap-1 text-blue-800">
                 <PaperClipIcon class="size-7" />Attachments
