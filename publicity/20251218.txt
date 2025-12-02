@@ -1,0 +1,26 @@
+The CINI National Lab on Data Science is pleased to announce the 10th seminar in the series Tales on Data Science and Big Data.
+
+*******************************************
+
+Date: December 18, 2025
+Time: 11:00 CET
+Website: https://seminars.sesar.di.unimi.it/
+
+Title: Autonomous AI Agents Orchestration and no-code design
+
+Speakers: Salvatore Cipolla, Davide Profeta (Engineering Ingegneria Informatica S.p.A.)
+
+Abstract: Recent advancements in Generative AI are accelerating the development of autonomous AI agents capable of performing complex tasks with minimal human intervention. Yet, as these agents grow in capability, new challenges arise around interoperability, coordination, and the safe integration of AI-driven behaviours into real-world systems. This talk explores how, using no-code design, it is possible to bridge the gap between powerful AI models and practical autonomous workflows, enabling teams to design, control, and monitor agentic systems without requiring deep engineering expertise.
+We will examine emerging interoperability standards—such as the Model Context Protocol (MCP) and Agent-to-Agent (A2A) communication protocols—that are shaping a new ecosystem where autonomous agents can reliably collaborate, exchange context, and coordinate actions. Beyond theory, the session will demonstrate a concrete application of these technologies through an autonomous agentic system, showcasing how no-code orchestration empowers secure, scalable, and transparent AI-driven operations.
+
+Track: industry
+
+Link: https://teams.microsoft.com/l/meetup-join/19%3aS2RBj6wmgm2Zjk3jx07ydAsihsKI8KSIkkQRSStaP7E1%40thread.tacv2/1764705659664?context=%7b%22Tid%22%3a%2213b55eef-7018-4674-a3d7-cc0db06d545c%22%2c%22Oid%22%3a%223b92e2cc-3616-4070-82ad-a9f97e1e92ac%22%7d
+
+*******************************************
+
+The seminars Tales on Data Science and Big Data present and discuss the most recent challenges, emerging trends, and theoretical and practical research and development in the field of Data Science and Big Data. Seminars will cover basic and applied research, as well as industrial activities, pertaining to data, from data governance to data processing and analysis. Seminars will also cover research and development in related domains where data and data science technologies are key, such as distributed systems and architectures, cloud-edge continuum, high-performance computing, blockchain, statistics, security and privacy, assurance and certification.
+
+The seminars are structured in three main tracks: academic, featuring renowned Italian and international scientists; industry, featuring speakers from industrial domains; and young, featuring researchers in early-stage careers.
+
+The research seminars target the Italian and international research community at all levels, from PhD students to professors and researchers in both academia, industry, and public administration. Seminars are held in English, virtually, tentatively on a two-month basis.

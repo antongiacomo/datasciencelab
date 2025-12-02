@@ -1,0 +1,25 @@
+The CINI National Lab on Data Science is pleased to announce the 9th seminar in the series Tales on Data Science and Big Data.
+
+*******************************************
+
+Date: November 7, 2025
+Time: 11:00 CET
+Website: https://seminars.sesar.di.unimi.it/
+
+Title: Learning in Adversarial Settings: Breaking Models by Changing World View
+
+Speakers: Fabio De Gaspari (Sapienza University of Rome)
+
+Abstract: Recent advancements in machine learning are driving us toward a more automated cyberspace. Modern machine learning models achieve super-human performance across diverse tasks, and the emergence of large language models promises even more rapid advancements in the near future. However, there is more to the story than just performance. In this talk, we'll take a closer look at today's machine learning models from a security angle, focusing on how they perform in adversarial settings where adversaries may try to exploit their weaknesses. Can we really trust these models to make fair decisions in critical areas such as cyber defense? Can we be sure that models are safe to deploy on sensitive systems? Can we publicly and safely share models with others without worry or risk?
+
+Track: Young
+
+Link: https://teams.microsoft.com/l/meetup-join/19%3aS2RBj6wmgm2Zjk3jx07ydAsihsKI8KSIkkQRSStaP7E1%40thread.tacv2/1761213369351?context=%7b%22Tid%22%3a%2213b55eef-7018-4674-a3d7-cc0db06d545c%22%2c%22Oid%22%3a%223b92e2cc-3616-4070-82ad-a9f97e1e92ac%22%7d
+
+*******************************************
+
+The seminars Tales on Data Science and Big Data present and discuss the most recent challenges, emerging trends, and theoretical and practical research and development in the field of Data Science and Big Data. Seminars will cover basic and applied research, as well as industrial activities, pertaining to data, from data governance to data processing and analysis. Seminars will also cover research and development in related domains where data and data science technologies are key, such as distributed systems and architectures, cloud-edge continuum, high-performance computing, blockchain, statistics, security and privacy, assurance and certification.
+
+The seminars are structured in three main tracks: academic, featuring renowned Italian and international scientists; industry, featuring speakers from industrial domains; and young, featuring researchers in early-stage careers.
+
+The research seminars target the Italian and international research community at all levels, from PhD students to professors and researchers in both academia, industry, and public administration. Seminars are held in English, virtually, tentatively on a two-month basis.

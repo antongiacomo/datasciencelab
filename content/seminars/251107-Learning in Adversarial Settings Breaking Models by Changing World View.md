@@ -6,7 +6,7 @@ type: Young
 tags: []
 date: 07-11-2025
 time: 11:00
-
+resources: ["20251107-Learning in Adversarial Settings Breaking Models by Changing World View.pdf"]
 people:
     -   name: Fabio De Gaspari
         affiliation: Sapienza University of Rome
