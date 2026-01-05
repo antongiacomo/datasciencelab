@@ -6,6 +6,7 @@ type: Industry
 tags: []
 date: 18-12-2025
 time: 11:00
+resources: ["251228-Autonomous AI Agents Orchestration and no-code design.pdf"]
 people:
     -   name: Salvatore Cipolla
         affiliation: Engineering Ingegneria Informatica S.p.A.
