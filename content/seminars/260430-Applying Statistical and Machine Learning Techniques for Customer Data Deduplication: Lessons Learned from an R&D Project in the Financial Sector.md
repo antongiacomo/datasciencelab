@@ -10,7 +10,7 @@ time: 11:00
 people:
     -   name: Robert Wrembel
         affiliation: Poznan University of Technology
-        bio: >
+        bio: |
             Robert Wrembel (PhD, Dr. Habil.) is a professor in the Faculty of Computing and Telecommunications at Poznan University of Technology (PUT), Poland. He received his habilitation in 2008, specializing in database systems and data warehouses. His primary research includes data integration, data quality, databases, data warehouses, and data lakes. He held a few administrative roles at PUT, including two terms as deputy dean of the Faculty of Computing and Management (2008–2012) and the Faculty of Computing (2012–2016). Since Jan 2023, he has chaired the Data Processing Technologies research group at PUT.
 
             From 2023 to 2024, he led the Interdisciplinary Centre for Artificial Intelligence and Cybersecurity in Poznań. His business career includes also serving as a lecturer for Oracle Poland (1998–2005) and a consultant for Rodan Systems (2002–2003). He currently provides expert IT consultancy for a private hospital. Over the past decade, he has led four R&D projects for industry, including Samsung Electronics, PKO BP (the largest Polish bank), and Kogeneracja Zachód (company in the energy sector). 
