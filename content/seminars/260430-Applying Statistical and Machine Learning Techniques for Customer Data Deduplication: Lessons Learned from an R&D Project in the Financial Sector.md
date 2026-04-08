@@ -1,5 +1,5 @@
 ---
-title: "260430-Applying Statistical and Machine Learning Techniques for Customer Data Deduplication: Lessons Learned from an R&D Project in the Financial Sector"
+title: "Applying Statistical and Machine Learning Techniques for Customer Data Deduplication: Lessons Learned from an R&D Project in the Financial Sector"
 description: ''
 type: Academic
 
@@ -19,7 +19,9 @@ people:
         Robert’s academic outreach includes visits to several research institutions, including: Free University of Bolzano-Bozen (Italy), INRAE (France), Universitá degli Studi di Milano (Italy), Universitat Politècnica de Catalunya - BarcelonaTech (Spain), Université Lyon 2 (France), Universidad de Costa Rica (Costa Rica), Klagenfurt University (Austria), Loyola University (USA), INRIA Paris-Rocquencourt (France), and Université Paris Dauphine (France). 
         
         He is a graduate of the \"TOP 500 Innovators\" program (2012), run at Stanford University, USA and he is a former intern at BI company TARGIT, USA (2013). He is a senior member of the ACM, a member of the Committee of Informatics of the Polish Academy of Sciences (PAS), and a chair of the Data Engineering research group at the PAS. He is actively involved in a few committees at the International Federation of Information Processing (IFIP): (1) the representative of the PAS in the IFIP General Assembly, (2) a country representative in the IFIP Technical Committee TC 2 - Software: Theory and Practice, and (3) a chair the of the IFIP Working Group 2.6 - Database"
-    homepage:  http://www.cs.put.poznan.pl/rwrembel/
+        homepage: http://www.cs.put.poznan.pl/rwrembel/
+
+location: https://teams.microsoft.com/meet/350433314675277?p=y8guvEfA8gGLZw3A7S
 ---
 
 ### Abstract
