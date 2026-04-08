@@ -5,7 +5,7 @@ type: Academic
 
 tags: []
 date: 30-04-2026
-time: 11
+time: 11:00
 
 people:
     -   name: Robert Wrembel
