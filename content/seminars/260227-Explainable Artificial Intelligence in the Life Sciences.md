@@ -7,6 +7,7 @@ tags: []
 date: 27-02-2026
 time: 11:00
 video_link: https://youtu.be/WtalaNLiIYA
+resources: ["260227-Explainable Artificial Intelligence in the Life Sciences.pdf"]
 
 people:
     -   name: Andrea Mastropietro
