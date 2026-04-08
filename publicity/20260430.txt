@@ -1,0 +1,25 @@
+The CINI National Lab on Data Science is pleased to announce the 12th seminar in the series Tales on Data Science and Big Data.
+
+*******************************************
+
+Date: April 30, 2026
+Time: 11:00 CET
+Website: https://seminars.sesar.di.unimi.it/
+
+Title: Applying Statistical and Machine Learning Techniques for Customer Data Deduplication: Lessons Learned from an R&D Project in the Financial Sector
+
+Speaker: Robert Wrembel (Poznan University of Technology)
+
+Abstract: Drawing on three years of R&D for a major Polish financial institution, this talk shares insights from the development and deployment of customer data deduplication pipelines. I will outline the journey of building two distinct end-to-end deduplication pipelines: one rooted in statistical modeling (currently live in production) and another - leveraging machine learning. Beyond the case study, I will outline the evolution of deduplication techniques, including standard approaches as well as modern machine learning and neural network solutions.
+
+Track: academic
+
+Link: https://teams.microsoft.com/meet/350433314675277?p=y8guvEfA8gGLZw3A7S
+
+*******************************************
+
+The seminars Tales on Data Science and Big Data present and discuss the most recent challenges, emerging trends, and theoretical and practical research and development in the field of Data Science and Big Data. Seminars will cover basic and applied research, as well as industrial activities, pertaining to data, from data governance to data processing and analysis. Seminars will also cover research and development in related domains where data and data science technologies are key, such as distributed systems and architectures, cloud-edge continuum, high-performance computing, blockchain, statistics, security and privacy, assurance and certification.
+
+The seminars are structured in three main tracks: academic, featuring renowned Italian and international scientists; industry, featuring speakers from industrial domains; and young, featuring researchers in early-stage careers.
+
+The research seminars target the Italian and international research community at all levels, from PhD students to professors and researchers in both academia, industry, and public administration. Seminars are held in English, virtually, tentatively on a two-month basis.
