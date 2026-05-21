@@ -7,6 +7,7 @@ tags: []
 date: 30-04-2026
 time: 11:00
 video_link: https://youtu.be/GR-UKEOoxdM
+resources: ["260430-Applying Statistical and Machine Learning Techniques for Customer Data Deduplication.pdf"]
 
 people:
     -   name: Robert Wrembel
