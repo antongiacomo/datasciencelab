@@ -1,0 +1,25 @@
+The CINI National Lab on Data Science is pleased to announce the 13th seminar in the series Tales on Data Science and Big Data.
+
+*******************************************
+
+Date: 02 July 2026
+Time:  11:00 CET
+Website: https://seminars.sesar.di.unimi.it/
+
+Title: Concept-based Explainable AI (C-XAI): a paradigm shift in XAI
+
+Speakers: Gabriele Ciravegna (Intesa Sanpaolo Innovation Center's Artificial Intelligence Lab)
+
+Abstract: The field of eXplainable Artificial Intelligence (XAI) emerged in response to the growing need for more transparent and reliable models. However, using raw features to provide explanations has been discussed in several works lately, advocating for more user-understandable explanations. To address this issue, a wide range of papers proposed Concept-based XAI (C-XAI) methods have been published in recent years. Nevertheless, a unified categorization and precise field definition are still missing. In this talk, we will try to fill the gap through a review of C-XAI approaches. We will identify and define what is a concept and a concept-based explanation. We will then provide guidelines for selecting a suitable category based on the application context. Additionally, we will analyse a few prominent supervised concept-based models and their application in the field of voice disorder analysis.
+
+Track: Industry
+
+Link: https://teams.microsoft.com/meet/312946888849068?p=0hNNeqOp8spUn5tRfC
+
+*******************************************
+
+The seminars Tales on Data Science and Big Data present and discuss the most recent challenges, emerging trends, and theoretical and practical research and development in the field of Data Science and Big Data. Seminars will cover basic and applied research, as well as industrial activities, pertaining to data, from data governance to data processing and analysis. Seminars will also cover research and development in related domains where data and data science technologies are key, such as distributed systems and architectures, cloud-edge continuum, high-performance computing, blockchain, statistics, security and privacy, assurance and certification.
+
+The seminars are structured in three main tracks: academic, featuring renowned Italian and international scientists; industry, featuring speakers from industrial domains; and young, featuring researchers in early-stage careers.
+
+The research seminars target the Italian and international research community at all levels, from PhD students to professors and researchers in both academia, industry, and public administration. Seminars are held in English, virtually, tentatively on a two-month basis.
