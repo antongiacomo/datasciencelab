@@ -7,6 +7,7 @@ tags: []
 date: 02-07-2026
 time: 11:00
 video_link: https://youtu.be/2k8fFnXo6sc
+resources: ["260702-Concept-based Explainable AI C-XAI- a paradigm shift in XAI.pdf"]
 
 people:
     -   name: Gabriele Ciravegna
