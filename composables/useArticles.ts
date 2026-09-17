@@ -59,7 +59,11 @@ export function useArticles() {
       .sort((a, b) => dayjs(a.meta.date, "DD-MM-YYYY").valueOf() - dayjs(b.meta.date, "DD-MM-YYYY").valueOf())
       .reverse();
 
-    const articlesMonthGrouped = useGroupBy(articlesPast, "date")
+    const articlesMonthGrouped = articlesPast.reduce((acc: Record<string, typeof articlesPast>, article) => {
+      const key = article.date;
+      (acc[key] ??= []).push(article);
+      return acc;
+    }, {})
 
     return Object.entries(articlesMonthGrouped).map(([date, articles]) => {
       return {

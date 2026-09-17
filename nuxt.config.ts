@@ -35,9 +35,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    // "@nuxtjs/tailwindcss",
     "@nuxt/content",
-    "nuxt-lodash",
     "@vueuse/nuxt",
     "@nuxt/image"
   ],

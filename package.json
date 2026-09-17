@@ -1,14 +1,12 @@
 {
   "name": "nuxt-app",
   "devDependencies": {
-    "@nuxt/devtools": "^2.6.5",
-    "@nuxt/image": "^1.9.0",
-    "@nuxtjs/tailwindcss": "^6.13.2",
+    "@nuxt/devtools": "^3.4.2",
+    "@nuxt/image": "^2.1.0",
     "@tailwindcss/typography": "^0.5.16",
     "@vueuse/core": "^14.0.0",
     "@vueuse/nuxt": "^14.0.0",
-    "nuxt": "^3.19.3",
-    "nuxt-lodash": "^2.5.3",
+    "nuxt": "^4.5.2",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "vue": "^3.5.13",
