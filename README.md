@@ -1,5 +1,7 @@
 # CINI Lab on Data Science — Seminars
 
+[![Vercel](https://img.shields.io/github/deployments/antongiacomo/datasciencelab/Production?logo=vercel&label=vercel&logoColor=white)](https://seminars.sesar.di.unimi.it/)
+
 Website for the CINI National Lab on Data Science seminar series, *Tales on Data Science and Big Data*. It lists upcoming and past seminars, with speaker details, recordings, and attachments.
 
 Live at [seminars.sesar.di.unimi.it](https://seminars.sesar.di.unimi.it/).
