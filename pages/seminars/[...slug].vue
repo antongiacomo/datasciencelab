@@ -28,7 +28,13 @@ if (error.value) {
   });
 }
 
-const { title, description, meta, date, time, isPast, dateFormatted } = toRefs(data.value);
+const title = computed(() => data.value.title);
+const description = computed(() => data.value.description);
+const meta = computed(() => data.value.meta);
+const date = computed(() => data.value.date);
+const time = computed(() => data.value.time);
+const isPast = computed(() => data.value.isPast);
+const dateFormatted = computed(() => data.value.dateFormatted);
 const { copy } = useClipboard({})
 
 useHead({
@@ -82,9 +88,9 @@ whenever(cmd_k, async () => {
       </h1>
       <div class="mt-2 flex gap-2 text-xl text-gray-500 font-medium">
         <div>
-          <nuxt-link v-for="(person, key) in (meta && meta.people) || []" :key="key" :href="`#${person.name}`">
+          <a v-for="(person, key) in (meta && meta.people) || []" :key="key" :href="`#${person.name}`">
             <span v-if="key != 0">,</span> {{ person.name }}
-          </nuxt-link>
+          </a>
         </div>
       </div>
       <hr class="my-8 border-black" />
@@ -154,10 +160,10 @@ whenever(cmd_k, async () => {
             <template #default>
               <ul>
                 <li class="my-4" v-for="(a, i) in (meta && meta.resources) || []" :key="i">
-                  <nuxt-link :href="`/resources/${a}`" target="_blank" class="hover:underline underline-offset-4"
+                  <a :href="`/resources/${a}`" target="_blank" class="hover:underline underline-offset-4"
                     rel="noopener noreferrer">
                     Attachment {{ i + 1 }}
-                  </nuxt-link>
+                  </a>
                 </li>
               </ul>
             </template>
