@@ -42,5 +42,11 @@ export default defineNuxtConfig({
     "@nuxt/image"
   ],
 
+  content: {
+    experimental: {
+      nativeSqlite: true,
+    },
+  },
+
   compatibilityDate: "2024-11-02",
 });
