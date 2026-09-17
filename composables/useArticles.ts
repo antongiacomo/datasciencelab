@@ -1,7 +1,10 @@
 import type { ParsedContent } from "@nuxt/content/dist/runtime/types"
 import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat.js";
 
 import articleFactory from "~/shared/utils/articleFactory";
+
+dayjs.extend(customParseFormat);
 
 interface UseArticles {
   search: string;
@@ -53,7 +56,7 @@ export function useArticles() {
   const articlesPast = computed(() => {
     const articlesPast = articles.value
       .filter((article) => article.isPast)
-      .sort((a, b) => new Date(a.meta.date).getTime() - new Date(b.meta.date).getTime())
+      .sort((a, b) => dayjs(a.meta.date, "DD-MM-YYYY").valueOf() - dayjs(b.meta.date, "DD-MM-YYYY").valueOf())
       .reverse();
 
     const articlesMonthGrouped = useGroupBy(articlesPast, "date")
