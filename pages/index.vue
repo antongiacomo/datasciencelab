@@ -46,14 +46,14 @@ await fetchArticles();
               class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3"
             >
               <MagnifyingGlassIcon
-                class="size-6 stroke-2 text-gray-500 dark:text-gray-400"
+                class="size-6 stroke-2 text-gray-500"
               />
             </div>
             <input
               v-model="search"
               type="text"
               id="simple-search"
-              class="block w-full rounded-xl border border-gray-300 bg-gray-50 p-4 ps-10 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              class="block w-full rounded-xl border border-gray-300 bg-gray-50 p-4 ps-10 text-gray-900 focus:border-blue-500 focus:ring-blue-500"
               placeholder="Filter..."
               required
             />
