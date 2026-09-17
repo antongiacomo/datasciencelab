@@ -1,7 +1,6 @@
 <script setup>
 const props = defineProps({
   icon: Function,
-  color: String,
 });
 </script>
 <template>

@@ -1,5 +1,4 @@
 <script setup>
-import { PaperClipIcon } from "@heroicons/vue/24/outline";
 </script>
 
 <template>

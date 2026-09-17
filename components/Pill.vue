@@ -3,20 +3,12 @@ const props = defineProps({
 icon: Function,
   color: String,
 });
-const classObj = computed(() => {
-  return {
-    [`bg-${props.color}-200`]: true,
-    [`border-${props.color}-600`]: true,
-    [`text-${props.color}-800`]: true,
-  };
-});
-
-const classObject = reactive({
-  'bg-red-200': props.color =="red",
+const classObject = computed(() => ({
+  'bg-red-200': props.color == "red",
   'border-red-600': props.color == "red",
   'text-red-800': props.color == "red",
 
-  'bg-gray-100': props.color =="gray",
+  'bg-gray-100': props.color == "gray",
   'border-gray-600': props.color == "gray",
   'text-gray-800': props.color == "gray",
 
@@ -27,8 +19,7 @@ const classObject = reactive({
   'bg-blue-200': props.color == "blue",
   'border-blue-600': props.color == "blue",
   'text-blue-800': props.color == "blue",
-
-})
+}))
 </script>
 <template>
   <div

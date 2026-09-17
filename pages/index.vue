@@ -9,7 +9,7 @@ import Article from "~/components/Article.vue";
 
 const { fetchArticles, articlesFuture, articlesPast, search } = useArticles();
 
-const articles = fetchArticles();
+await fetchArticles();
 </script>
 
 <template>
@@ -81,7 +81,7 @@ const articles = fetchArticles();
         </div>
         <div>
           <div class="flex flex-col">
-            <div v-for="articlesMonth in articlesPast" :key="date">
+            <div v-for="articlesMonth in articlesPast" :key="articlesMonth.monthName">
               <h1 class="text-blue-950 mt-6 mb-2 text-xl font-extrabold">
                 {{ articlesMonth.monthName }}
               </h1>

@@ -1,12 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
-  runtimeConfig: {
-    public: {
-      baseURL: 'https://localhost:3000/datasciencelab',
-    }
-  },
-
   devtools: {
     enabled: false,
     timeline: {

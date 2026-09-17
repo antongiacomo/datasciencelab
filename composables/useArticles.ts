@@ -24,9 +24,8 @@ export function useArticles() {
   const fetchArticles = async () => {
     state.value.loading = true;
 
-    const { data, error } = await useAsyncData(async () => {
-      let articles = await queryCollection('pages').all()
-      return articles.sort();
+    const { data, error } = await useAsyncData("articles", async () => {
+      return await queryCollection('pages').all()
     });
 
 
@@ -38,6 +37,7 @@ export function useArticles() {
     }
 
     state.value.data = data.value ?? [];
+    state.value.loading = false;
   };
 
   const articles = computed<ParsedContent[]>(() => {
@@ -46,10 +46,10 @@ export function useArticles() {
     }
 
     return state.value.data.filter((article: any) => {
-      return article.title
+      return (article.title ?? "")
         .toLowerCase()
         .includes(state.value.search.toLowerCase())
-      
+
     }).map((article) => articleFactory(article));
   });
 
@@ -60,21 +60,23 @@ export function useArticles() {
       .reverse();
 
     const articlesMonthGrouped = articlesPast.reduce((acc: Record<string, typeof articlesPast>, article) => {
-      const key = article.date;
+      const key = dayjs(article.meta.date, "DD-MM-YYYY").format("MM-YYYY");
       (acc[key] ??= []).push(article);
       return acc;
     }, {})
 
-    return Object.entries(articlesMonthGrouped).map(([date, articles]) => {
+    return Object.entries(articlesMonthGrouped).map(([monthKey, articles]) => {
       return {
-        monthName: dayjs(date, "DD-MM-YYYY").format("MMMM YYYY"),
+        monthName: dayjs(monthKey, "MM-YYYY").format("MMMM YYYY"),
         articles
       }
     });
   });
 
   const articlesFuture = computed(() => {
-    return articles.value.filter((article) => !article.isPast);
+    return articles.value
+      .filter((article) => !article.isPast)
+      .sort((a, b) => dayjs(a.meta.date, "DD-MM-YYYY").valueOf() - dayjs(b.meta.date, "DD-MM-YYYY").valueOf());
   });
 
   return {

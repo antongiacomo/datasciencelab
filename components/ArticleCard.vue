@@ -19,7 +19,7 @@ defineProps<{ article: Article }>();
           {{ article.title }}
           <div class="flex gap-2 text-lg font-medium text-gray-500">
             <div>
-              {{ article.meta.people.map((person) => person.name).join(", ") }}
+              {{ article.meta?.people?.map((person) => person.name).join(", ") }}
             </div>
           </div>
         </div>

@@ -8,6 +8,6 @@ export default function (str) {
       'À': 'A\'', 'È': 'E\'', 'Ì': 'I\'', 'Ò': 'O\'', 'Ù': 'U\''
       // Add more mappings as needed
     };
-    return asciiMap[char] || '';
+    return asciiMap[char] || char;
   });
 }

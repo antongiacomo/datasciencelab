@@ -4,9 +4,11 @@ import articleFactory from '~/shared/utils/articleFactory';
 export default defineEventHandler(async (event) => {
   const path = "/seminars/" + getRouterParam(event, 'slug')
 
-  const doc = articleFactory(
-    await queryCollection(event,"pages").path(path).first()
-  );
+  const rawDoc = await queryCollection(event,"pages").path(path).first();
+  if (!rawDoc) {
+    throw createError({ statusCode: 404, statusMessage: 'Seminar not found' });
+  }
+  const doc = articleFactory(rawDoc);
   const all = await queryCollection(event,"pages").all();
   const incremental_id = all.findIndex(a => a.path === path) + 1
 
@@ -23,7 +25,7 @@ Website: https://seminars.sesar.di.unimi.it/
 
 Title: ${convertAscii(doc.title)}
 
-Speakers: ${doc.meta.people.map(a => convertAscii(a.name) + " (" + convertAscii(a.affiliation) + ")").join(", ")}
+Speakers: ${(doc.meta.people ?? []).map(a => convertAscii(a.name) + " (" + convertAscii(a.affiliation) + ")").join(", ")}
 
 Abstract: ${doc.body.value[1][2] ?? ''}
 

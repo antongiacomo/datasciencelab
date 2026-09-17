@@ -36,8 +36,9 @@ useHead({
   meta: [
     { name: "description", content: data.value.description },
     {
-      hid: `${data.value.imgurl}`,
-      property: `${data.value.imgurl}`,
+      hid: "og:image",
+      property: "og:image",
+      content: data.value.meta?.imgurl,
     },
   ],
 });
@@ -53,7 +54,6 @@ const { cmd_k } = useMagicKeys({
 whenever(cmd_k, async () => {
   $fetch(`/api${path}`)
     .then((data) => {
-      console.log(data);
       copy(data);
     });
 });
@@ -82,7 +82,7 @@ whenever(cmd_k, async () => {
       </h1>
       <div class="mt-2 flex gap-2 text-xl text-gray-500 font-medium">
         <div>
-          <nuxt-link v-for="(person, key) in (meta && meta.people) || []" :href="`#${person.name}`">
+          <nuxt-link v-for="(person, key) in (meta && meta.people) || []" :key="key" :href="`#${person.name}`">
             <span v-if="key != 0">,</span> {{ person.name }}
           </nuxt-link>
         </div>
